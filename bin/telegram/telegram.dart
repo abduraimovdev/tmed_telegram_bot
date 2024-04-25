@@ -51,8 +51,6 @@ void mainTelegram() async {
       }
     }
   });
-
-
 }
 
 Future<void> getMyConclusion(TeleDartMessage message) async {
@@ -62,7 +60,7 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
       message.reply("Xulosa yo’q");
     } else {
       for (int i = 0; i < files.length; i++) {
-        teledart.sendMessage(message.chat.id, "File Link ${files[i].fileUrl} \nPhone Number :${files[i].number} ");
+        teledart.sendDocument(message.chat.id, files[i].fileUrl);
       }
     }
   } else {
