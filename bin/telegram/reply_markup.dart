@@ -5,7 +5,7 @@ sealed class AppReplyMarkUps {
     resizeKeyboard: true,
     keyboard: [
       [
-        KeyboardButton(text: 'Mening xulosalarim'),
+        KeyboardButton(text: 'Xulosa olish'),
       ]
     ],
   );
@@ -19,3 +19,4 @@ sealed class AppReplyMarkUps {
     ],
   );
 }
+
