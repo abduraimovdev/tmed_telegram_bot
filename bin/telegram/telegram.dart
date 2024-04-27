@@ -8,6 +8,7 @@ import 'reply_markup.dart';
 late final TeleDart teledart;
 
 void mainTelegram() async {
+  print("Running Telegram Bot...");
   var botToken = '7160370195:AAG2H4soUx2ZaOpSjNOkb7bARdqFXhfTLUY';
   final username = (await Telegram(botToken).getMe()).username;
   teledart = TeleDart(botToken, Event(username!));

@@ -10,6 +10,9 @@ environment:
 dependencies:
   hive: ^2.2.3
   shelf: ^1.4.1
+  shelf_router: ^1.1.4
+  shelf_router_generator: ^1.1.0
+  shelf_swagger_ui: ^1.0.0+2
   teledart: ^0.6.1
 
 dev_dependencies:
