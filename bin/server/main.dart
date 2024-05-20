@@ -8,7 +8,7 @@ void mainServer(String? host, int? port) async {
 
   final service = Service();
 
-  final server = await shelf_io.serve(service.handler, host ?? '0.0.0.0', port ?? 8080);
+  final server = await shelf_io.serve(service.handler, host ?? '192.168.0.11', port ?? 8080);
 
   await LogService.writeLog("Serving at http://${server.address.host}:${server.port}");
 
