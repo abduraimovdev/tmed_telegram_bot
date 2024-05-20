@@ -1,1 +1,19 @@
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-20 11:39:51.098098
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080
