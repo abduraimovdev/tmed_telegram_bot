@@ -11,6 +11,6 @@ RUN dart pub get
 RUN dart compile exe ./bin/main.dart -o ./build/dartserve
 
 FROM debian:buster-slim
-COPY --from=builder /tmed_tg/build /bin
+COPY --from=builder /build/dartserve /bin
 
 CMD ["./build/dartserve"]
