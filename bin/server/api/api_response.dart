@@ -9,7 +9,7 @@ class ApiResponse {
     try {
       final body = jsonDecode(await request.readAsString()) as Map;
       if (request.headers.containsKey("code") && request.headers["code"] == "0000" && body.containsKey("phone") && body.containsKey("file_url")) {
-        HiveDB.saveFile(body["file_url"], body["phone"]);
+        Storage.saveFile(body["file_url"], body["phone"]);
         return Response.ok('Successfully Saved');
       } else {
         return Response.badRequest(body: "Data is failed ");

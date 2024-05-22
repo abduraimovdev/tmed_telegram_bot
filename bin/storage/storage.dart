@@ -1,65 +1,60 @@
-import 'dart:convert';
-
-import 'package:hive/hive.dart';
-
 import '../models/file_model.dart';
 import '../models/user_model.dart';
+import 'sql/sql.dart';
+import 'sql/query.dart';
 
-class HiveDB {
-  static late final Box box;
+class Storage {
   static const String boxName = "box";
   static const String files = "files";
   static const String users = "users";
-  static const String path = "./box";
+  static final sql = PostgresSettings();
 
-  static Future<void> initHive() async {
-    Hive.init(path);
-
-    if (Hive.isBoxOpen(boxName)) {
-      box = Hive.box(boxName);
-    } else {
-      box = await Hive.openBox(boxName, path: path);
-    }
+  static Future<void> initStorage() async {
+    await sql.init();
+    await UserModel.createDB();
+    await FileModel.createDB();
   }
 
   static void saveFile(String fileUrl, String phone) async {
-    final model = FileModel(number: phone, fileUrl: fileUrl);
-    final filesModel = await getFiles();
-    await box.put(files, jsonEncode([...filesModel.map((e) => e.toJson()), model.toJson()]));
+    final model = FileModel(phone: phone, fileUrl: fileUrl);
+    await sql.execute(QueryBuilder.i.insertInto(tableName: files, values: model.values, columns: model.columns).build());
     print("Saved $model");
   }
 
   static Future<List<FileModel>> getFiles() async {
-    final result = box.get(files, defaultValue: jsonEncode([]));
-    return (jsonDecode(result) as List).map((e) => FileModel.fromJson(e)).toList();
+    final result = await sql.execute(QueryBuilder.i.selectAll().from(files).build());
+    return result.map<FileModel>((element) => FileModel.fromSql(element)).toList();
   }
 
-  static Future<List<FileModel>> getUserFiles(String chatId) async {
+  static Future<List<FileModel>> getUserFiles(int chatId) async {
     try {
-      final users = await getUsers();
-      final user = users.firstWhere((element) => element.id == chatId);
-      final files = await getFiles();
-      return files.where((e) => e.number == user.phone).toList();
-    } catch (e) {
+      final usersResult = (await sql.execute(QueryBuilder.i.selectAll().from(users).where().add('id').equal(chatId).build())).map<UserModel>((element) => UserModel.fromSql(element)).toList();
+      if (usersResult.isEmpty) {
+        return [];
+      }
+
+      final result = await sql.execute(QueryBuilder.i.selectAll().from(files).where().add('phone').equal(usersResult.first.phone).build());
+      return result.map<FileModel>((element) => FileModel.fromSql(element)).toList();
+    } catch (e, s) {
+      print(e);
+      print(s);
       return [];
     }
   }
 
-  static Future<void> saveUser(String chatId, String number, String firstName, String lastName) async {
+  static Future<void> saveUser(int chatId, String number, String firstName, String lastName) async {
     final model = UserModel(id: chatId, phone: number, firstName: firstName, lastName: lastName);
-    final usersModel = await getUsers();
-    await box.put(users, jsonEncode([...usersModel.map((e) => e.toJson()), model.toJson()]));
+    await sql.execute(QueryBuilder.i.insertInto(tableName: users, values: model.values, columns: model.columns).build());
     print("Saved $model");
   }
 
   static Future<List<UserModel>> getUsers() async {
-    final result = box.get(users, defaultValue: jsonEncode([]));
-    print(result);
-    return (jsonDecode(result) as List).map((e) => UserModel.fromJson(e)).toList();
+    final result = await sql.execute(QueryBuilder.i.selectAll().from(users).build());
+    return result.map<UserModel>((element) => UserModel.fromSql(element)).toList();
   }
 
   static Future<bool> checkUser(String chatId) async {
-    final result = await getUsers();
-    return result.where((element) => element.id == chatId).toList().isNotEmpty;
+    final result = await sql.execute(QueryBuilder.i.selectAll().from(users).where().add('id').equal(chatId).build());
+    return result.map<UserModel>((element) => UserModel.fromSql(element)).toList().isNotEmpty;
   }
 }

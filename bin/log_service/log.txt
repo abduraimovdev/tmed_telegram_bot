@@ -16,4 +16,618 @@ LongPollingException: HttpClientException: 409 Conflict: terminated by other get
 #6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
 #7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-Serving at http://0.0.0.0:8080
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-20 12:52:59.931891
+Error :
+LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+Serving at http://localhost:8080 
+
+
+
+
+2024-05-20 12:53:20.758163
+Error :
+LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+Serving at http://localhost:8080 
+
+
+
+
+2024-05-20 12:53:29.053072
+Error :
+LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+Serving at http://localhost:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-22 18:08:10.269317
+Error :
+Invalid argument (query): Must either be a String or an SqlImpl: Instance of 'QueryBuilder'
+
+ StackTrace #0      new InternalQueryDescription.wrap (package:postgres/src/v3/query_description.dart:127:7)
+#1      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:116:50)
+#2      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#3      Storage.saveFile (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:24:15)
+#4      ApiResponse.sendTelegram (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/server/api/api_response.dart:12:17)
+<asynchronous suspension>
+#5      RouterEntry.invoke.<anonymous closure> (package:shelf_router/src/router_entry.dart:107:16)
+<asynchronous suspension>
+#6      RouterEntry.invoke (package:shelf_router/src/router_entry.dart:104:12)
+<asynchronous suspension>
+#7      Router.call (package:shelf_router/src/router.dart:184:26)
+<asynchronous suspension>
+#8      RouterEntry.invoke.<anonymous closure> (package:shelf_router/src/router_entry.dart:107:16)
+<asynchronous suspension>
+#9      RouterEntry.invoke (package:shelf_router/src/router_entry.dart:104:12)
+<asynchronous suspension>
+#10     Router.call (package:shelf_router/src/router.dart:184:26)
+<asynchronous suspension>
+#11     handleRequest (package:shelf/shelf_io.dart:138:16)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-22 18:09:00.657618
+Error :
+Severity.error 22003: value "5658199334" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
+#6      _rootRunUnary (dart:async/zone.dart:1407:47)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#14     _rootRunUnary (dart:async/zone.dart:1407:47)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#22     _rootRunUnary (dart:async/zone.dart:1407:47)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#29     _rootRun (dart:async/zone.dart:1391:47)
+#30     _CustomZone.run (dart:async/zone.dart:1301:19)
+#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#33     _rootRun (dart:async/zone.dart:1399:13)
+#34     _CustomZone.run (dart:async/zone.dart:1301:19)
+#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:00.733697
+Error :
+Severity.error 22003: value "5658199334" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
+#6      _rootRunUnary (dart:async/zone.dart:1407:47)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#14     _rootRunUnary (dart:async/zone.dart:1407:47)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#22     _rootRunUnary (dart:async/zone.dart:1407:47)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#29     _rootRun (dart:async/zone.dart:1391:47)
+#30     _CustomZone.run (dart:async/zone.dart:1301:19)
+#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#33     _rootRun (dart:async/zone.dart:1399:13)
+#34     _CustomZone.run (dart:async/zone.dart:1301:19)
+#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:00.807879
+Error :
+Severity.error 22003: value "5658199334" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
+#6      _rootRunUnary (dart:async/zone.dart:1407:47)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#14     _rootRunUnary (dart:async/zone.dart:1407:47)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#22     _rootRunUnary (dart:async/zone.dart:1407:47)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#29     _rootRun (dart:async/zone.dart:1391:47)
+#30     _CustomZone.run (dart:async/zone.dart:1301:19)
+#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#33     _rootRun (dart:async/zone.dart:1399:13)
+#34     _CustomZone.run (dart:async/zone.dart:1301:19)
+#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:00.882532
+Error :
+Severity.error 22003: value "5658199334" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
+#6      _rootRunUnary (dart:async/zone.dart:1407:47)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#14     _rootRunUnary (dart:async/zone.dart:1407:47)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#22     _rootRunUnary (dart:async/zone.dart:1407:47)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#29     _rootRun (dart:async/zone.dart:1391:47)
+#30     _CustomZone.run (dart:async/zone.dart:1301:19)
+#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#33     _rootRun (dart:async/zone.dart:1399:13)
+#34     _CustomZone.run (dart:async/zone.dart:1301:19)
+#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:00.953718
+Error :
+Severity.error 22003: value "6238676402" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
+#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
+#7      _rootRunUnary (dart:async/zone.dart:1407:47)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#15     _rootRunUnary (dart:async/zone.dart:1407:47)
+#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#23     _rootRunUnary (dart:async/zone.dart:1407:47)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#30     _rootRun (dart:async/zone.dart:1391:47)
+#31     _CustomZone.run (dart:async/zone.dart:1301:19)
+#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#34     _rootRun (dart:async/zone.dart:1399:13)
+#35     _CustomZone.run (dart:async/zone.dart:1301:19)
+#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:01.024674
+Error :
+Severity.error 22003: value "6238676402" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
+#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
+#7      _rootRunUnary (dart:async/zone.dart:1407:47)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#15     _rootRunUnary (dart:async/zone.dart:1407:47)
+#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#23     _rootRunUnary (dart:async/zone.dart:1407:47)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#30     _rootRun (dart:async/zone.dart:1391:47)
+#31     _CustomZone.run (dart:async/zone.dart:1301:19)
+#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#34     _rootRun (dart:async/zone.dart:1399:13)
+#35     _CustomZone.run (dart:async/zone.dart:1301:19)
+#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:01.105726
+Error :
+Severity.error 22003: value "6238676402" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
+#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
+#7      _rootRunUnary (dart:async/zone.dart:1407:47)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#15     _rootRunUnary (dart:async/zone.dart:1407:47)
+#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#23     _rootRunUnary (dart:async/zone.dart:1407:47)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#30     _rootRun (dart:async/zone.dart:1391:47)
+#31     _CustomZone.run (dart:async/zone.dart:1301:19)
+#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#34     _rootRun (dart:async/zone.dart:1399:13)
+#35     _CustomZone.run (dart:async/zone.dart:1301:19)
+#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:01.194185
+Error :
+Severity.error 22003: value "6238676402" is out of range for type integer
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
+#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
+#7      _rootRunUnary (dart:async/zone.dart:1407:47)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
+#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#15     _rootRunUnary (dart:async/zone.dart:1407:47)
+#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
+#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
+#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
+#23     _rootRunUnary (dart:async/zone.dart:1407:47)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#30     _rootRun (dart:async/zone.dart:1391:47)
+#31     _CustomZone.run (dart:async/zone.dart:1301:19)
+#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#34     _rootRun (dart:async/zone.dart:1399:13)
+#35     _CustomZone.run (dart:async/zone.dart:1301:19)
+#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
+#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-22 18:09:33.521023
+Error :
+Invalid argument (query): Must either be a String or an SqlImpl: Instance of 'QueryBuilder'
+
+ StackTrace #0      new InternalQueryDescription.wrap (package:postgres/src/v3/query_description.dart:127:7)
+#1      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:116:50)
+#2      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#3      Storage.saveUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:44:15)
+#4      mainTelegram.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:51:19)
+#5      _rootRun (dart:async/zone.dart:1391:47)
+#6      _CustomZone.run (dart:async/zone.dart:1301:19)
+#7      _FutureListener.handleWhenComplete (dart:async/future_impl.dart:206:18)
+#8      Future._propagateToListeners.handleWhenCompleteCallback (dart:async/future_impl.dart:817:39)
+#9      Future._propagateToListeners (dart:async/future_impl.dart:873:11)
+#10     Future._completeWithValue (dart:async/future_impl.dart:652:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-05-22 18:09:33.619221
+Error :
+Severity.error 42601: syntax error at or near "SELECT"
+
+ StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
+#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
+#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
+#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
+#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
+#6      mainTelegram.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:52:13)
+#7      _rootRun (dart:async/zone.dart:1391:47)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _FutureListener.handleWhenComplete (dart:async/future_impl.dart:206:18)
+#10     Future._propagateToListeners.handleWhenCompleteCallback (dart:async/future_impl.dart:817:39)
+#11     Future._propagateToListeners (dart:async/future_impl.dart:873:11)
+#12     Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-22 18:13:05.707306
+Error :
+type 'int' is not a subtype of type 'String' in type cast
+
+ StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
+#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
+#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
+#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
+#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
+#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
+#6      new List.of (dart:core-patch/array_patch.dart:39:18)
+#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
+#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
+<asynchronous suspension>
+#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-05-22 18:13:07.234069
+Error :
+type 'int' is not a subtype of type 'String' in type cast
+
+ StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
+#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
+#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
+#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
+#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
+#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
+#6      new List.of (dart:core-patch/array_patch.dart:39:18)
+#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
+#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
+<asynchronous suspension>
+#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
+<asynchronous suspension>
+#10     mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-05-22 18:13:11.253501
+Error :
+type 'int' is not a subtype of type 'String' in type cast
+
+ StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
+#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
+#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
+#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
+#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
+#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
+#6      new List.of (dart:core-patch/array_patch.dart:39:18)
+#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
+#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
+<asynchronous suspension>
+#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
+<asynchronous suspension>
+#10     mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:5)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080

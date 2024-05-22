@@ -10,7 +10,7 @@ void main(List args) async {
   await LogService.init();
   await runZonedGuarded(
     () async {
-      await HiveDB.initHive();
+      await Storage.initStorage();
       String? host;
       int? port;
       if (args.length >= 2) {
