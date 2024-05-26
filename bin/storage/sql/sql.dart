@@ -1,4 +1,5 @@
 import 'package:postgres/postgres.dart';
+
 class PostgresSettings {
   // 1 : Docker dan postgres yuklab olinadi
   // 2 : docker-compose.yml to'g'rilanadi
@@ -15,6 +16,7 @@ class PostgresSettings {
   static final _instance = PostgresSettings._();
 
   Future<void> init() async {
+    print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
         host: "185.251.90.108",
@@ -40,15 +42,28 @@ class PostgresSettings {
     QueryMode? queryMode,
     Duration? timeout,
   }) async {
-    if(_connection.isOpen) {
-      return _connection.execute(
-        query,
-        parameters: parameters,
-        ignoreRows: ignoreRows,
-        queryMode: queryMode,
-        timeout: timeout,
-      );
-    }else {
+    if (_connection.isOpen) {
+      try {
+        return _connection.execute(
+          query,
+          parameters: parameters,
+          ignoreRows: ignoreRows,
+          queryMode: queryMode,
+          timeout: timeout,
+        );
+      } catch (e, s) {
+        await init();
+        print(e);
+        print(s);
+        return _connection.execute(
+          query,
+          parameters: parameters,
+          ignoreRows: ignoreRows,
+          queryMode: queryMode,
+          timeout: timeout,
+        );
+      }
+    } else {
       await init();
       return _connection.execute(
         query,
