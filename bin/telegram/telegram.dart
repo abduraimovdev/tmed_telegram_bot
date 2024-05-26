@@ -17,7 +17,7 @@ void mainTelegram() async {
 
   bot.onMessage(entityType: 'bot_command', keyword: 'start').listen(
     (message) async {
-      if (await Storage.checkUser(message.chat.id.toString())) {
+      if (await Storage.checkUser(message.chat.id)) {
         bot.sendPhoto(
           message.chat.id,
           "https://t.me/t_med_log/3330",
@@ -41,7 +41,7 @@ void mainTelegram() async {
 
   bot.onMessage().listen((message) async {
     if (message.contact != null) {
-      if (await Storage.checkUser(message.chat.id.toString())) {
+      if (await Storage.checkUser(message.chat.id)) {
         message.reply("Oldin Ro'yhatdan o'tkansiz !");
       } else {
         message.reply(
@@ -59,7 +59,7 @@ void mainTelegram() async {
 }
 
 Future<void> getMyConclusion(TeleDartMessage message) async {
-  if (await Storage.checkUser(message.chat.id.toString())) {
+  if (await Storage.checkUser(message.chat.id)) {
     final files = await Storage.getUserFiles(message.chat.id);
     if (files.isEmpty) {
       message.reply("Xulosa yo’q");
