@@ -40,12 +40,23 @@ class PostgresSettings {
     QueryMode? queryMode,
     Duration? timeout,
   }) async {
-    return _connection.execute(
-      query,
-      parameters: parameters,
-      ignoreRows: ignoreRows,
-      queryMode: queryMode,
-      timeout: timeout,
-    );
+    if(_connection.isOpen) {
+      return _connection.execute(
+        query,
+        parameters: parameters,
+        ignoreRows: ignoreRows,
+        queryMode: queryMode,
+        timeout: timeout,
+      );
+    }else {
+      await init();
+      return _connection.execute(
+        query,
+        parameters: parameters,
+        ignoreRows: ignoreRows,
+        queryMode: queryMode,
+        timeout: timeout,
+      );
+    }
   }
 }
