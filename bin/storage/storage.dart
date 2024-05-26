@@ -54,7 +54,7 @@ class Storage {
   }
 
   static Future<bool> checkUser(String chatId) async {
-    final result = await sql.execute(QueryBuilder.i.selectAll().from(users).where().add('id').equal(chatId).build());
+    final result = await sql.execute(QueryBuilder.i.selectAll().from(users).where().add('id').equal(chatId.toString()).build());
     return result.map<UserModel>((element) => UserModel.fromSql(element)).toList().isNotEmpty;
   }
   static String injectionFilter(String text) {
