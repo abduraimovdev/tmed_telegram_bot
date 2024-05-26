@@ -43,7 +43,7 @@ class Storage {
   }
 
   static Future<void> saveUser(int chatId, String number, String firstName, String lastName) async {
-    final model = UserModel(id: chatId, phone: number, firstName: injectionFilter(firstName), lastName: injectionFilter(lastName));
+    final model = UserModel(id: chatId.toString(), phone: number, firstName: injectionFilter(firstName), lastName: injectionFilter(lastName));
     await sql.execute(QueryBuilder.i.insertInto(tableName: users, values: model.values, columns: model.columns).build());
     print("Saved $model");
   }
@@ -62,6 +62,6 @@ class Storage {
     newText = text.replaceAll("'", "");
     newText = text.replaceAll("*", "");
     newText = text.replaceAll("", "");
-    return text;
+    return newText;
   }
 }
