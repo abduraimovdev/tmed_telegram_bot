@@ -848,4 +848,78 @@ Severity.error 42601: syntax error at or near "serial"
 <asynchronous suspension>
 #7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
 <asynchronous suspension>
-Serving at http://0.0.0.0:8080
+Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-27 16:39:48.150
+Error :
+SocketException: Connection failed (OS Error: No such file or directory, errno = 2), address = 185.251.90.108, port = 5432
+
+ StackTrace #0      _NativeSocket.startConnect (dart:io-patch/socket_patch.dart:721:35)
+#1      _NativeSocket.connect (dart:io-patch/socket_patch.dart:984:12)
+#2      _RawSocket.connect (dart:io-patch/socket_patch.dart:1902:26)
+#3      RawSocket.connect (dart:io-patch/socket_patch.dart:21:23)
+#4      Socket._connect (dart:io-patch/socket_patch.dart:2128:22)
+#5      Socket.connect (dart:io/socket.dart:789:21)
+#6      PgConnectionImplementation._connect (package:postgres/src/v3/connection.dart:237:31)
+#7      PgConnectionImplementation.connect (package:postgres/src/v3/connection.dart:200:35)
+#8      Connection.open (package:postgres/postgres.dart:214:39)
+#9      PostgresSettings.init (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:20:36)
+#10     Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:13:15)
+#11     main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:21)
+#12     _rootRun (dart:async/zone.dart:1399:13)
+#13     _CustomZone.run (dart:async/zone.dart:1301:19)
+#14     _runZoned (dart:async/zone.dart:1826:10)
+#15     runZonedGuarded (dart:async/zone.dart:1814:12)
+#16     main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:9)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-27 16:45:17.993952
+Error :
+LateInitializationError: Field '_connection@27516574' has already been initialized.
+
+ StackTrace #0      LateError._throwFieldAlreadyInitialized (dart:_internal-patch/internal_patch.dart:185:5)
+#1      PostgresSettings._connection= (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart)
+#2      PostgresSettings.init (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:20:5)
+<asynchronous suspension>
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:68:7)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
+Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-27 16:50:34.387831
+Error :
+Severity.error Connection is closing down
+
+ StackTrace #0      _PgSessionBase._checkActive (package:postgres/src/v3/connection.dart:59:7)
+#1      _PgSessionBase._withResource.<anonymous closure> (package:postgres/src/v3/connection.dart:68:7)
+#2      Pool.withResource (package:pool/pool.dart:127:28)
+<asynchronous suspension>
+#3      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:5)
+<asynchronous suspension>
+#4      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:24)
+<asynchronous suspension>
+#5      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#6      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#7      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#8      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>

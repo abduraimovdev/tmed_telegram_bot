@@ -42,8 +42,8 @@ class PostgresSettings {
     QueryMode? queryMode,
     Duration? timeout,
   }) async {
-    if (_connection.isOpen) {
-      try {
+    try {
+      if (_connection.isOpen) {
         return _connection.execute(
           query,
           parameters: parameters,
@@ -51,10 +51,8 @@ class PostgresSettings {
           queryMode: queryMode,
           timeout: timeout,
         );
-      } catch (e, s) {
+      } else {
         await init();
-        print(e);
-        print(s);
         return _connection.execute(
           query,
           parameters: parameters,
@@ -63,15 +61,10 @@ class PostgresSettings {
           timeout: timeout,
         );
       }
-    } else {
-      await init();
-      return _connection.execute(
-        query,
-        parameters: parameters,
-        ignoreRows: ignoreRows,
-        queryMode: queryMode,
-        timeout: timeout,
-      );
+    } catch (e, s) {
+      print(e);
+      print(s);
+      return Result(rows: [], affectedRows: 0, schema: ResultSchema([]));
     }
   }
 }
