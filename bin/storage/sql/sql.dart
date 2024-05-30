@@ -44,21 +44,22 @@ class PostgresSettings {
   }) async {
     try {
       if (_connection.isOpen) {
-        return _connection.execute(
-          query,
-          parameters: parameters,
-          ignoreRows: ignoreRows,
-          queryMode: queryMode,
-          timeout: timeout,
-        );
+        final qy = await _connection.prepare(query);
+        return qy.run(parameters, timeout: timeout);
       } else {
+        print("Connection Closing...");
+        await _connection.close();
+        print("Connection Closed...");
+        await Future.delayed(Duration(seconds: 2));
+        print("Reconnecting...");
         await init();
         return _connection.execute(
           query,
           parameters: parameters,
           ignoreRows: ignoreRows,
           queryMode: queryMode,
-          timeout: timeout,
+
+          timeout: Duration(seconds: 3600),
         );
       }
     } catch (e, s) {

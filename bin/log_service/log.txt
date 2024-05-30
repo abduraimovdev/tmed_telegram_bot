@@ -923,3 +923,172 @@ Severity.error Connection is closing down
 <asynchronous suspension>
 #8      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
 <asynchronous suspension>
+ 
+
+
+
+
+2024-05-31 00:35:34.889905
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-31 00:36:01.338657
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-05-31 00:39:38.559853
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-31 00:40:32.252907
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-31 00:41:00.060520
+Error :
+SocketException: Connection timed out, host: 192.168.0.112, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-31 00:41:54.395779
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-05-31 00:42:47.780837
+Error :
+SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080
