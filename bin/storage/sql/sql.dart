@@ -7,7 +7,7 @@ class PostgresSettings {
   // 4 : localhost dan adminerga kirib  postgresga ulanib ko'riladi
   // 5 : va ko'd orqali tekshiriladi
 
-  late final Connection _connection;
+  static late Connection _connection;
 
   PostgresSettings._();
 
@@ -19,13 +19,13 @@ class PostgresSettings {
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
-        host: "192.168.0.11",
-        port: 25060,
-        database: "tg_bot",
-        username: "tg_bot",
-        password: "GreenL1gh7",
+        host: "185.251.90.108",
+        port: 5432,
+        database: "dart",
+        username: "postgres",
+        password: "dart",
       ),
-      // settings: ConnectionSettings(sslMode: SslMode.disable),
+      settings: ConnectionSettings(sslMode: SslMode.disable),
     );
   }
 
