@@ -20,7 +20,7 @@ class PostgresSettings {
     _connection = await Connection.open(
       Endpoint(
         host: "192.168.0.11",
-        port: 63219,
+        port: 25060,
         database: "tg_bot",
         username: "tg_bot",
         password: "GreenL1gh7",
