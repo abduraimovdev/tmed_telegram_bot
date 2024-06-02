@@ -19,11 +19,11 @@ class PostgresSettings {
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
-        host: "185.251.90.108",
-        port: 5432,
-        database: "dart",
-        username: "postgres",
-        password: "dart",
+        host: "192.168.0.11",
+        port: 63219,
+        database: "tg_bot",
+        username: "tg_bot",
+        password: "GreenL1gh7",
       ),
       settings: ConnectionSettings(sslMode: SslMode.disable),
     );
