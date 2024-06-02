@@ -25,7 +25,7 @@ class PostgresSettings {
         username: "tg_bot",
         password: "GreenL1gh7",
       ),
-      settings: ConnectionSettings(sslMode: SslMode.disable),
+      // settings: ConnectionSettings(sslMode: SslMode.disable),
     );
   }
 

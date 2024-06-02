@@ -1091,4 +1091,137 @@ SocketException: Connection timed out, host: 192.168.0.11, port: 5432
 #12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
 #13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
 #14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080
+Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+
+
+
+
+2024-06-02 23:26:03.312990
+Error :
+Severity.error 42501: permission denied for schema public
+
+ StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
+#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
+#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-02 23:26:15.657603
+Error :
+Severity.error 42501: permission denied for schema public
+
+ StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
+#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
+#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-02 23:26:27.015757
+Error :
+Severity.error 42501: permission denied for schema public
+
+ StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
+#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
+#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-02 23:26:54.034924
+Error :
+SocketException: Connection timed out, host: 82.215.78.34, port: 25060
+
+ StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
+#1      _rootRun (dart:async/zone.dart:1391:47)
+#2      _CustomZone.run (dart:async/zone.dart:1301:19)
+#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
+#4      _rootRun (dart:async/zone.dart:1391:47)
+#5      _CustomZone.run (dart:async/zone.dart:1301:19)
+#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-02 23:27:05.319013
+Error :
+Severity.error 42501: permission denied for schema public
+
+ StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
+#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
+#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-02 23:27:30.093001
+Error :
+Severity.error 42501: permission denied for schema public
+
+ StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
+#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
+#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
+#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
+<asynchronous suspension>
+#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+<asynchronous suspension>
+#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+<asynchronous suspension>
+#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+<asynchronous suspension>
