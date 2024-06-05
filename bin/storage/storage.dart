@@ -2,6 +2,7 @@ import '../models/file_model.dart';
 import '../models/user_model.dart';
 import 'sql/sql.dart';
 import 'sql/query.dart';
+import '../main.dart';
 
 class Storage {
   static const String boxName = "box";
@@ -57,6 +58,7 @@ class Storage {
     final result = await sql.execute(QueryBuilder.i.selectAll().from(users).where().add("id").equal(chatId).build());
     return result.map<UserModel>((element) => UserModel.fromSql(element)).toList().isNotEmpty;
   }
+
   static String injectionFilter(String text) {
     String newText = text.replaceAll("`", "");
     newText = text.replaceAll("'", "");

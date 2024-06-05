@@ -3,17 +3,21 @@ import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
 
 import '../storage/storage.dart';
+import '../main.dart';
 import 'reply_markup.dart';
 
-late final TeleDart bot;
+late TeleDart bot;
+int a = 0;
+bool botStatus = false;
 
 void mainTelegram() async {
   print("Running Telegram Bot...");
+
   var botToken = '7160370195:AAG2H4soUx2ZaOpSjNOkb7bARdqFXhfTLUY';
   final username = (await Telegram(botToken).getMe()).username;
   bot = TeleDart(botToken, Event(username!));
-
   bot.start();
+  print("Starting bot");
 
   bot.onMessage(entityType: 'bot_command', keyword: 'start').listen(
     (message) async {
@@ -44,15 +48,16 @@ void mainTelegram() async {
       if (await Storage.checkUser(message.chat.id)) {
         message.reply("Oldin Ro'yhatdan o'tkansiz !");
       } else {
-        message.reply(
+        message
+            .reply(
           "Ma'lumotlar tekshirilmoqda...",
           replyMarkup: AppReplyMarkUps.myFiles,
-        ).whenComplete(() {
+        )
+            .whenComplete(() {
           Storage.saveUser(message.chat.id, message.contact!.phoneNumber, message.contact!.firstName, message.contact?.lastName ?? '').whenComplete(() {
             getMyConclusion(message);
           });
         });
-
       }
     }
   });
@@ -65,7 +70,7 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
       message.reply("Xulosa yo’q");
     } else {
       for (int i = 0; i < files.length; i++) {
-        bot.sendDocument(message.chat.id, files[i].fileUrl, caption: "${i+1} : Xulosa");
+        bot.sendDocument(message.chat.id, files[i].fileUrl, caption: "${i + 1} : Xulosa");
       }
     }
   } else {

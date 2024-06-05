@@ -1,9 +1,9 @@
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+ 
 
 
 
 
-2024-05-20 11:39:51.098098
+2024-06-05 14:28:46.444463
 Error :
 LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
@@ -16,626 +16,35 @@ LongPollingException: HttpClientException: 409 Conflict: terminated by other get
 #6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
 #7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-20 12:52:59.931891
-Error :
-LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
-
- StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
-#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
-#2      _rootRunUnary (dart:async/zone.dart:1407:47)
-#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
-#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
-#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
-#7      Future._completeError (dart:async/future_impl.dart:660:5)
-<asynchronous suspension>
-Serving at http://localhost:8080 
-
-
-
-
-2024-05-20 12:53:20.758163
-Error :
-LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
-
- StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
-#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
-#2      _rootRunUnary (dart:async/zone.dart:1407:47)
-#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
-#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
-#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
-#7      Future._completeError (dart:async/future_impl.dart:660:5)
-<asynchronous suspension>
-Serving at http://localhost:8080 
-
-
-
-
-2024-05-20 12:53:29.053072
-Error :
-LongPollingException: HttpClientException: 409 Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
-
- StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
-#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
-#2      _rootRunUnary (dart:async/zone.dart:1407:47)
-#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
-#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
-#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
-#7      Future._completeError (dart:async/future_impl.dart:660:5)
-<asynchronous suspension>
-Serving at http://localhost:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-22 18:08:10.269317
-Error :
-Invalid argument (query): Must either be a String or an SqlImpl: Instance of 'QueryBuilder'
-
- StackTrace #0      new InternalQueryDescription.wrap (package:postgres/src/v3/query_description.dart:127:7)
-#1      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:116:50)
-#2      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#3      Storage.saveFile (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:24:15)
-#4      ApiResponse.sendTelegram (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/server/api/api_response.dart:12:17)
-<asynchronous suspension>
-#5      RouterEntry.invoke.<anonymous closure> (package:shelf_router/src/router_entry.dart:107:16)
-<asynchronous suspension>
-#6      RouterEntry.invoke (package:shelf_router/src/router_entry.dart:104:12)
-<asynchronous suspension>
-#7      Router.call (package:shelf_router/src/router.dart:184:26)
-<asynchronous suspension>
-#8      RouterEntry.invoke.<anonymous closure> (package:shelf_router/src/router_entry.dart:107:16)
-<asynchronous suspension>
-#9      RouterEntry.invoke (package:shelf_router/src/router_entry.dart:104:12)
-<asynchronous suspension>
-#10     Router.call (package:shelf_router/src/router.dart:184:26)
-<asynchronous suspension>
-#11     handleRequest (package:shelf/shelf_io.dart:138:16)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-22 18:09:00.657618
-Error :
-Severity.error 22003: value "5658199334" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
-#6      _rootRunUnary (dart:async/zone.dart:1407:47)
-#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#14     _rootRunUnary (dart:async/zone.dart:1407:47)
-#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#22     _rootRunUnary (dart:async/zone.dart:1407:47)
-#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#29     _rootRun (dart:async/zone.dart:1391:47)
-#30     _CustomZone.run (dart:async/zone.dart:1301:19)
-#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#33     _rootRun (dart:async/zone.dart:1399:13)
-#34     _CustomZone.run (dart:async/zone.dart:1301:19)
-#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
  
 
 
 
 
-2024-05-22 18:09:00.733697
+2024-06-05 14:28:56.306449
 Error :
-Severity.error 22003: value "5658199334" is out of range for type integer
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
-#6      _rootRunUnary (dart:async/zone.dart:1407:47)
-#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#14     _rootRunUnary (dart:async/zone.dart:1407:47)
-#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#22     _rootRunUnary (dart:async/zone.dart:1407:47)
-#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#29     _rootRun (dart:async/zone.dart:1391:47)
-#30     _CustomZone.run (dart:async/zone.dart:1301:19)
-#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#33     _rootRun (dart:async/zone.dart:1399:13)
-#34     _CustomZone.run (dart:async/zone.dart:1301:19)
-#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:00.807879
-Error :
-Severity.error 22003: value "5658199334" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
-#6      _rootRunUnary (dart:async/zone.dart:1407:47)
-#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#14     _rootRunUnary (dart:async/zone.dart:1407:47)
-#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#22     _rootRunUnary (dart:async/zone.dart:1407:47)
-#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#29     _rootRun (dart:async/zone.dart:1391:47)
-#30     _CustomZone.run (dart:async/zone.dart:1301:19)
-#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#33     _rootRun (dart:async/zone.dart:1399:13)
-#34     _CustomZone.run (dart:async/zone.dart:1301:19)
-#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:00.882532
-Error :
-Severity.error 22003: value "5658199334" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:20:25)
-#6      _rootRunUnary (dart:async/zone.dart:1407:47)
-#7      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#8      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#9      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#10     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#11     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#12     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#13     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#14     _rootRunUnary (dart:async/zone.dart:1407:47)
-#15     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#19     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#20     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#21     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#22     _rootRunUnary (dart:async/zone.dart:1407:47)
-#23     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#26     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#27     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#28     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#29     _rootRun (dart:async/zone.dart:1391:47)
-#30     _CustomZone.run (dart:async/zone.dart:1301:19)
-#31     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#32     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#33     _rootRun (dart:async/zone.dart:1399:13)
-#34     _CustomZone.run (dart:async/zone.dart:1301:19)
-#35     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#37     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#40     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#41     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:00.953718
-Error :
-Severity.error 22003: value "6238676402" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:01.024674
-Error :
-Severity.error 22003: value "6238676402" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:01.105726
-Error :
-Severity.error 22003: value "6238676402" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:01.194185
-Error :
-Severity.error 22003: value "6238676402" is out of range for type integer
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-22 18:09:33.521023
-Error :
-Invalid argument (query): Must either be a String or an SqlImpl: Instance of 'QueryBuilder'
-
- StackTrace #0      new InternalQueryDescription.wrap (package:postgres/src/v3/query_description.dart:127:7)
-#1      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:116:50)
-#2      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#3      Storage.saveUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:44:15)
-#4      mainTelegram.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:51:19)
-#5      _rootRun (dart:async/zone.dart:1391:47)
-#6      _CustomZone.run (dart:async/zone.dart:1301:19)
-#7      _FutureListener.handleWhenComplete (dart:async/future_impl.dart:206:18)
-#8      Future._propagateToListeners.handleWhenCompleteCallback (dart:async/future_impl.dart:817:39)
-#9      Future._propagateToListeners (dart:async/future_impl.dart:873:11)
-#10     Future._completeWithValue (dart:async/future_impl.dart:652:5)
-<asynchronous suspension>
- 
-
-
-
-
-2024-05-22 18:09:33.619221
-Error :
-Severity.error 42601: syntax error at or near "SELECT"
-
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:43:24)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:54:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:52:13)
-#7      _rootRun (dart:async/zone.dart:1391:47)
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
 #8      _CustomZone.run (dart:async/zone.dart:1301:19)
-#9      _FutureListener.handleWhenComplete (dart:async/future_impl.dart:206:18)
-#10     Future._propagateToListeners.handleWhenCompleteCallback (dart:async/future_impl.dart:817:39)
-#11     Future._propagateToListeners (dart:async/future_impl.dart:873:11)
-#12     Future._completeError (dart:async/future_impl.dart:660:5)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-22 18:13:05.707306
-Error :
-type 'int' is not a subtype of type 'String' in type cast
-
- StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
-#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
-#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
-#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
-#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
-#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
-#6      new List.of (dart:core-patch/array_patch.dart:39:18)
-#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
-#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
-<asynchronous suspension>
-#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
-<asynchronous suspension>
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
  
 
 
 
 
-2024-05-22 18:13:07.234069
-Error :
-type 'int' is not a subtype of type 'String' in type cast
-
- StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
-#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
-#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
-#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
-#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
-#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
-#6      new List.of (dart:core-patch/array_patch.dart:39:18)
-#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
-#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
-<asynchronous suspension>
-#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
-<asynchronous suspension>
-#10     mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:5)
-<asynchronous suspension>
- 
-
-
-
-
-2024-05-22 18:13:11.253501
-Error :
-type 'int' is not a subtype of type 'String' in type cast
-
- StackTrace #0      new UserModel.fromSql (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:64:21)
-#1      Storage.checkUser.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:57)
-#2      MappedListIterable.elementAt (dart:_internal/iterable.dart:425:31)
-#3      ListIterator.moveNext (dart:_internal/iterable.dart:354:26)
-#4      new _GrowableList._ofEfficientLengthIterable (dart:core-patch/growable_array.dart:189:27)
-#5      new _GrowableList.of (dart:core-patch/growable_array.dart:150:28)
-#6      new List.of (dart:core-patch/array_patch.dart:39:18)
-#7      ListIterable.toList (dart:_internal/iterable.dart:224:7)
-#8      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:55:75)
-<asynchronous suspension>
-#9      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:7)
-<asynchronous suspension>
-#10     mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:5)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-27 02:20:33.738703
+2024-06-05 14:28:56.453199
 Error :
 LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
@@ -648,650 +57,1447 @@ LongPollingException: HttpClientException: 409 Conflict: terminated by other get
 #6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
 #7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+ 
 
 
 
 
-2024-05-27 02:21:50.561283
+2024-06-05 14:29:06.266229
 Error :
-Severity.error 42601: syntax error at or near "="
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:47:28)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:57:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
 
 
 
 
-2024-05-27 02:23:38.690251
+2024-06-05 14:29:06.482723
 Error :
-Severity.error 42601: syntax error at or near "475409665"
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:47:28)
-#4      Storage.checkUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:57:30)
-#5      getMyConclusion (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:62:21)
-#6      mainTelegram.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:39:11)
-#7      _rootRunUnary (dart:async/zone.dart:1407:47)
-#8      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#12     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#13     _MapStream._handleData (dart:async/stream_pipe.dart:218:10)
-#14     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#15     _rootRunUnary (dart:async/zone.dart:1407:47)
-#16     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#20     _ForwardingStreamSubscription._add (dart:async/stream_pipe.dart:123:11)
-#21     _WhereStream._handleData (dart:async/stream_pipe.dart:195:12)
-#22     _ForwardingStreamSubscription._handleData (dart:async/stream_pipe.dart:153:13)
-#23     _rootRunUnary (dart:async/zone.dart:1407:47)
-#24     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#27     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
-#28     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
-#29     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
-#30     _rootRun (dart:async/zone.dart:1391:47)
-#31     _CustomZone.run (dart:async/zone.dart:1301:19)
-#32     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#34     _rootRun (dart:async/zone.dart:1399:13)
-#35     _CustomZone.run (dart:async/zone.dart:1301:19)
-#36     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#37     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#38     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
-#39     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
-#40     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
-#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:405:11)
-#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#43     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-27 02:29:29.692021
-Error :
-Severity.error 22003: integer out of range
-
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:161:31)
-<asynchronous suspension>
-#4      Storage.saveUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:47:5)
-<asynchronous suspension>
-#5      mainTelegram.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:51:149)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-27 02:31:39.238539
-Error :
-Severity.error 22003: integer out of range
-
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:161:31)
-<asynchronous suspension>
-#4      Storage.saveUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:47:5)
-<asynchronous suspension>
-#5      mainTelegram.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:51:149)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-27 02:32:35.437816
-Error :
-Severity.error 22003: integer out of range
-
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:161:31)
-<asynchronous suspension>
-#4      Storage.saveUser (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:47:5)
-<asynchronous suspension>
-#5      mainTelegram.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/telegram/telegram.dart:51:149)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-05-27 02:35:28.350699
+2024-06-05 14:29:16.446385
 Error :
-Severity.error 42601: syntax error at or near "bigint"
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:47:28)
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:30)
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:21)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-05-27 02:37:58.148648
+2024-06-05 14:29:16.451923
 Error :
-Severity.error 42601: syntax error at or near "serial"
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      _PgSessionBase._sendAndWaitForQuery (package:postgres/src/v3/connection.dart:81:30)
-#1      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:11)
-#2      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:30)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:47:28)
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:30)
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:21)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
 
 
 
 
-2024-05-27 16:39:48.150
+2024-06-05 14:29:26.351348
 Error :
-SocketException: Connection failed (OS Error: No such file or directory, errno = 2), address = 185.251.90.108, port = 5432
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      _NativeSocket.startConnect (dart:io-patch/socket_patch.dart:721:35)
-#1      _NativeSocket.connect (dart:io-patch/socket_patch.dart:984:12)
-#2      _RawSocket.connect (dart:io-patch/socket_patch.dart:1902:26)
-#3      RawSocket.connect (dart:io-patch/socket_patch.dart:21:23)
-#4      Socket._connect (dart:io-patch/socket_patch.dart:2128:22)
-#5      Socket.connect (dart:io/socket.dart:789:21)
-#6      PgConnectionImplementation._connect (package:postgres/src/v3/connection.dart:237:31)
-#7      PgConnectionImplementation.connect (package:postgres/src/v3/connection.dart:200:35)
-#8      Connection.open (package:postgres/postgres.dart:214:39)
-#9      PostgresSettings.init (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:20:36)
-#10     Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:13:15)
-#11     main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:21)
-#12     _rootRun (dart:async/zone.dart:1399:13)
-#13     _CustomZone.run (dart:async/zone.dart:1301:19)
-#14     _runZoned (dart:async/zone.dart:1826:10)
-#15     runZonedGuarded (dart:async/zone.dart:1814:12)
-#16     main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:9)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
 
 
 
 
-2024-05-27 16:45:17.993952
+2024-06-05 14:29:26.461437
 Error :
-LateInitializationError: Field '_connection@27516574' has already been initialized.
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      LateError._throwFieldAlreadyInitialized (dart:_internal-patch/internal_patch.dart:185:5)
-#1      PostgresSettings._connection= (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart)
-#2      PostgresSettings.init (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:20:5)
-<asynchronous suspension>
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:68:7)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
-<asynchronous suspension>
-Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-27 16:50:34.387831
-Error :
-Severity.error Connection is closing down
-
- StackTrace #0      _PgSessionBase._checkActive (package:postgres/src/v3/connection.dart:59:7)
-#1      _PgSessionBase._withResource.<anonymous closure> (package:postgres/src/v3/connection.dart:68:7)
-#2      Pool.withResource (package:pool/pool.dart:127:28)
-<asynchronous suspension>
-#3      _PgSessionBase._prepare (package:postgres/src/v3/connection.dart:182:5)
-<asynchronous suspension>
-#4      _PgSessionBase.execute (package:postgres/src/v3/connection.dart:159:24)
-<asynchronous suspension>
-#5      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#6      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#7      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#8      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-05-31 00:35:34.889905
+2024-06-05 14:29:36.327739
 Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
  
 
 
 
 
-2024-05-31 00:36:01.338657
+2024-06-05 14:29:36.433128
 Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
-Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-05-31 00:39:38.559853
-Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
-
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-31 00:40:32.252907
-Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
-
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-31 00:41:00.060520
-Error :
-SocketException: Connection timed out, host: 192.168.0.112, port: 5432
-
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-31 00:41:54.395779
-Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
-
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
-
-
-
-
-2024-05-31 00:42:47.780837
-Error :
-SocketException: Connection timed out, host: 192.168.0.11, port: 5432
-
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
-Serving at http://0.0.0.0:8080Serving at http://0.0.0.0:8080 
-
-
-
-
-2024-06-02 23:26:03.312990
-Error :
-Severity.error 42501: permission denied for schema public
-
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:26:15.657603
+2024-06-05 14:29:46.329777
 Error :
-Severity.error 42501: permission denied for schema public
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:29:46.475333
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:26:27.015757
+2024-06-05 14:29:56.354951
 Error :
-Severity.error 42501: permission denied for schema public
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:29:56.488219
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:26:54.034924
+2024-06-05 14:34:34.798688
 Error :
-SocketException: Connection timed out, host: 82.215.78.34, port: 25060
+TimeoutException after 0:00:15.000000: Future not completed
 
- StackTrace #0      _NativeSocket.connect.<anonymous closure>.<anonymous closure> (dart:io-patch/socket_patch.dart:990:11)
-#1      _rootRun (dart:async/zone.dart:1391:47)
-#2      _CustomZone.run (dart:async/zone.dart:1301:19)
-#3      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:943:34)
-#4      _rootRun (dart:async/zone.dart:1391:47)
-#5      _CustomZone.run (dart:async/zone.dart:1301:19)
-#6      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
-#7      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
-#8      _rootRun (dart:async/zone.dart:1399:13)
-#9      _CustomZone.run (dart:async/zone.dart:1301:19)
-#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
-#11     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
-#12     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
-#13     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
-#14     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
- 
+ StackTrace  
 
 
 
 
-2024-06-02 23:27:05.319013
+2024-06-05 14:34:35.108797
 Error :
-Severity.error 42501: permission denied for schema public
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:27:30.093001
+2024-06-05 14:34:35.177798
 Error :
-Severity.error 42501: permission denied for schema public
+Severity.fatal 53300: sorry, too many clients already
 
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:48:19)
-<asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
-<asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
-<asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
-<asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:34:36.132697
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:34:37.235190
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:34:38.398600
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:31:47.450706
+2024-06-05 14:34:38.421877
 Error :
-SocketException: Operation timed out (OS Error: Operation timed out, errno = 60), address = 82.215.78.34, port = 62701
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      _NativeSocket.startConnect (dart:io-patch/socket_patch.dart:721:35)
-#1      _NativeSocket.connect (dart:io-patch/socket_patch.dart:984:12)
-#2      _RawSocket.connect (dart:io-patch/socket_patch.dart:1902:26)
-#3      RawSocket.connect (dart:io-patch/socket_patch.dart:21:23)
-#4      Socket._connect (dart:io-patch/socket_patch.dart:2128:22)
-#5      Socket.connect (dart:io/socket.dart:789:21)
-#6      PgConnectionImplementation._connect (package:postgres/src/v3/connection.dart:237:31)
-#7      PgConnectionImplementation.connect (package:postgres/src/v3/connection.dart:200:35)
-#8      Connection.open (package:postgres/postgres.dart:214:39)
-#9      PostgresSettings.init (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:20:36)
-#10     Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:13:15)
-#11     main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:21)
-#12     _rootRun (dart:async/zone.dart:1399:13)
-#13     _CustomZone.run (dart:async/zone.dart:1301:19)
-#14     _runZoned (dart:async/zone.dart:1826:10)
-#15     runZonedGuarded (dart:async/zone.dart:1814:12)
-#16     main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:9)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:32:00.214943
+2024-06-05 14:34:39.811064
 Error :
-Severity.fatal Bad server certificate.
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      PgConnectionImplementation._connect.<anonymous closure> (package:postgres/src/v3/connection.dart:296:24)
-#1      _RawSecureSocket._onBadCertificateWrapper (dart:io/secure_socket.dart:834:29)
-#2      _SecureFilterImpl.handshake.<anonymous closure> (dart:io-patch/secure_socket_patch.dart:127:48)
-#3      _rootRunUnary (dart:async/zone.dart:1415:13)
-#4      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
-#5      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
-#6      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
-#7      _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
-#8      _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:784:19)
-#9      _StreamController._add (dart:async/stream_controller.dart:658:7)
-#10     _StreamController.add (dart:async/stream_controller.dart:606:5)
-#11     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
  
 
 
 
 
-2024-06-02 23:32:33.695726
+2024-06-05 14:34:46.512159
 Error :
-Severity.error 42501: permission denied for schema public
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
- StackTrace #0      new _PgResultStreamSubscription (package:postgres/src/v3/connection.dart:628:29)
-#1      _BoundStatement.listen (package:postgres/src/v3/connection.dart:600:12)
-#2      _PreparedStatement.run (package:postgres/src/v3/connection.dart:562:43)
-#3      PostgresSettings.execute (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/sql/sql.dart:49:19)
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-#4      UserModel.createDB (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/models/user_model.dart:37:5)
+ 
+
+
+
+
+2024-06-05 14:34:46.971714
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:34:56.439254
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-#5      Storage.initStorage (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/storage/storage.dart:14:5)
+ 
+
+
+
+
+2024-06-05 14:34:57.853360
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:35:06.450113
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-#6      main.<anonymous closure> (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:13:7)
+ 
+
+
+
+
+2024-06-05 14:35:09.437890
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:50:47.438346
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:50:47.806906
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
-#7      main (file:///Users/abduraimovdev/Desktop/apps/tmed_tg/bin/main.dart:11:3)
+ 
+
+
+
+
+2024-06-05 14:50:48.608471
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:50:50.878549
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
 <asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 14:50:56.423723
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 14:50:56.498717
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:51:06.454934
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 14:51:06.486082
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 14:51:16.417377
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 14:51:16.920148
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:29.081510
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:29.229057
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:29.342808
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:06:32.479547
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:06:36.115861
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:36.467087
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:06:46.480957
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:46.684516
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:06:56.339354
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:06:56.393437
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:07:06.440907
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:07:07.254367
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:07:16.428418
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:24.176809
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:24.550861
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:23:26.523573
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:29.317353
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:23:36.217047
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:36.299011
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:23:45.985821
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:46.291943
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:23:56.185898
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:23:56.314286
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:32:37.392450
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:32:37.578326
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:32:37.586017
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:32:40.721285
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:32:46.157882
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:32:46.419953
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:32:56.130530
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:32:56.339460
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:33:06.471921
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:33:06.744626
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+ 
+
+
+
+
+2024-06-05 15:33:16.292950
+Error :
+LongPollingException: HttpClientException: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+ StackTrace #0      LongPolling._onRecursivePollingHttpError (package:teledart/src/teledart/fetch/long_polling.dart:117:7)
+#1      LongPolling._recursivePolling.<anonymous closure> (package:teledart/src/teledart/fetch/long_polling.dart:104:15)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#4      _FutureListener.handleError (dart:async/future_impl.dart:181:22)
+#5      Future._propagateToListeners.handleError (dart:async/future_impl.dart:859:47)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:880:13)
+#7      Future._completeError (dart:async/future_impl.dart:660:5)
+<asynchronous suspension>
+ 
+
+
+
+
+2024-06-05 15:33:18.780549
+Error :
+Severity.fatal 53300: sorry, too many clients already
+
+ StackTrace #0      new _AuthenticationProcedure (package:postgres/src/v3/connection.dart:1057:29)
+#1      PgConnectionImplementation._startup.<anonymous closure> (package:postgres/src/v3/connection.dart:376:22)
+#2      new Future.<anonymous closure> (dart:async/future.dart:257:37)
+#3      _rootRun (dart:async/zone.dart:1391:47)
+#4      _CustomZone.run (dart:async/zone.dart:1301:19)
+#5      _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#6      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#7      _rootRun (dart:async/zone.dart:1399:13)
+#8      _CustomZone.run (dart:async/zone.dart:1301:19)
+#9      _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+#10     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+#11     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+#12     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+#13     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
