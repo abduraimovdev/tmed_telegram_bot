@@ -36,34 +36,3 @@ void main(List args) async {
     },
   );
 }
-//
-// class RestartTimer {
-//   static final _instance = RestartTimer._();
-//
-//   RestartTimer._();
-//
-//   factory RestartTimer() => _instance;
-//
-//   List<void Function()> functions = [];
-//
-//   void init() {
-//     Timer.periodic(
-//       Duration(seconds: 10),
-//       (timer) {
-//         print("RestartTimer running !");
-//         run();
-//       },
-//     );
-//   }
-//
-//   void run() {
-//     for (int i = 0; i < functions.length; i++) {
-//       functions[i]();
-//     }
-//   }
-//
-//   Future<void> add(Future<void> Function() func) async {
-//     await func();
-//     functions.add(func);
-//   }
-// }
