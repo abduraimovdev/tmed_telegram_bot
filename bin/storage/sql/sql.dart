@@ -16,6 +16,7 @@ class PostgresSettings {
   static final _instance = PostgresSettings._();
 
   Future<void> init() async {
+
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
