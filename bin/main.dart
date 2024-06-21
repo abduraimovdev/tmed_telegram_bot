@@ -11,6 +11,14 @@ void main(List args) async {
 
   await runZonedGuarded(
     () async {
+      print(DateTime.now().toLocal().toString());
+
+      Timer.periodic(
+        Duration(minutes: 5),
+        (timer) {
+          print(DateTime.now().toLocal().toString());
+        },
+      );
       await Storage.initStorage();
       String? host;
       int? port;

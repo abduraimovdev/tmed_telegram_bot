@@ -3,8 +3,8 @@ import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
 
 import '../storage/storage.dart';
-import '../main.dart';
 import 'reply_markup.dart';
+import '../storage/sql/sql.dart';
 
 late TeleDart bot;
 int a = 0;
@@ -61,6 +61,42 @@ void mainTelegram() async {
       }
     }
   });
+
+  // For Developer
+  bot.onMessage(entityType: 'bot_command', keyword: 'check').listen(
+    (message) async {
+      if (message.chat.id == 475409665) {
+        bot.sendMessage(
+          message.chat.id,
+          "Telegram Bot is Working !!!",
+          replyMarkup: AppReplyMarkUps.myFiles,
+        );
+        bot.sendMessage(
+          message.chat.id,
+          "Sql is Working : ${PostgresSettings().isConnected}",
+          replyMarkup: AppReplyMarkUps.myFiles,
+        );
+      }
+    },
+  );
+  bot.onMessage(entityType: 'bot_command', keyword: 'users').listen(
+    (message) async {
+      if (message.chat.id == 475409665) {
+        bot.sendMessage(
+          message.chat.id,
+          "Foydalanuvchilar olinmoqda...",
+        );
+        int index = 0;
+        for (var user in (await Storage.getUsers())) {
+          index++;
+          bot.sendMessage(
+            message.chat.id,
+            "Index : $index\nIsmi : ${user.firstName} ${user.lastName}\nTelefon Raqami : ${user.phone}",
+          );
+        }
+      }
+    },
+  );
 }
 
 Future<void> getMyConclusion(TeleDartMessage message) async {
