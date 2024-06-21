@@ -20,12 +20,18 @@ class PostgresSettings {
     _connection = await Connection.open(
       Endpoint(
         host: "192.168.0.11",
+        // host: "82.215.78.34",
         port: 25060,
+        // port: 63219,
         database: "tg_bot",
         username: "tg_bot",
         password: "GreenL1gh7",
       ),
-      settings: ConnectionSettings(sslMode: SslMode.disable),
+      settings: ConnectionSettings(
+        sslMode: SslMode.disable,
+        queryTimeout: Duration(minutes: 1),
+        connectTimeout: Duration(minutes: 1),
+      ),
     );
   }
 
@@ -45,7 +51,7 @@ class PostgresSettings {
     try {
       if (_connection.isOpen) {
         final qy = await _connection.prepare(query);
-        return qy.run(parameters, timeout: timeout);
+        return qy.run(parameters, timeout: Duration(minutes: 1));
       } else {
         print("Connection Closing...");
         await _connection.close();
@@ -58,11 +64,11 @@ class PostgresSettings {
           parameters: parameters,
           ignoreRows: ignoreRows,
           queryMode: queryMode,
-
-          timeout: Duration(seconds: 3600),
+          timeout: Duration(minutes: 1),
         );
       }
     } catch (e, s) {
+      print("Sql Excute Qila olmadi Nimadir hatolik ketti ko'rib chiqish zarur !");
       print(e);
       print(s);
       return Result(rows: [], affectedRows: 0, schema: ResultSchema([]));
