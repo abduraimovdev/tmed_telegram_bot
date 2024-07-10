@@ -1,6 +1,6 @@
 import 'package:postgres/postgres.dart';
 
-import '../../bin/storage/sql/sql.dart';
+import '../storage/sql/sql.dart';
 
 class UserModel {
   final int id;

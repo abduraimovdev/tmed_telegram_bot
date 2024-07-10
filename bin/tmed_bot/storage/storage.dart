@@ -2,7 +2,7 @@ import '../models/file_model.dart';
 import '../models/user_model.dart';
 import 'sql/sql.dart';
 import 'sql/query.dart';
-import '../main.dart';
+import '../../tmed_bot/main.dart';
 
 class Storage {
   static const String boxName = "box";

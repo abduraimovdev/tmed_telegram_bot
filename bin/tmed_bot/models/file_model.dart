@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:postgres/postgres.dart';
 
-import '../../bin/storage/sql/sql.dart';
+import '../storage/sql/sql.dart';
 
 class FileModel {
   final String phone;

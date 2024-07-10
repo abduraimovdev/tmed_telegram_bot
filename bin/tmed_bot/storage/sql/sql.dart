@@ -20,10 +20,10 @@ class PostgresSettings {
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
-        host: "192.168.0.11",
-        // host: "82.215.78.34",
-        port: 25060,
-        // port: 63219,
+        host: "192.168.0.11", // Remote
+        // host: "82.215.78.34", // Local Host
+        port: 25060, // Remote
+        // port: 63219, // Local Host
         database: "tg_bot",
         username: "tg_bot",
         password: "GreenL1gh7",
