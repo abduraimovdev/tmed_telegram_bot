@@ -19,17 +19,21 @@ class LogService {
   }
 
   static Future<void> writeLog(String log) async {
+    print(log);
     await LogBot.sendMessage(log);
     // await file.writeAsString(await loadLog() + log);
   }
 
   static Future<void> clearAndWrite(String log) async {
+    print(log);
     await LogBot.sendMessage(log);
 
     // await file.writeAsString(log);
   }
 
   static Future<void> writeESLOG(Object error, StackTrace stackTrace) async {
+    print(error);
+    print(stackTrace);
 
     String log = "Error :\n${error.toString()}\n\n StackTrace ${stackTrace.toString()}";
     await LogBot.sendMessage(log);
