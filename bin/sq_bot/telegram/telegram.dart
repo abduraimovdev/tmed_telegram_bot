@@ -6,15 +6,21 @@ import 'dart:io' as io;
 import 'reply_markup.dart';
 import './models/user_steps.dart';
 import 'package:image/image.dart';
+import '../../log_service/log_service.dart';
 
 part './utils.dart';
 
 late TeleDart bot;
-int a = 0;
 bool botStatus = false;
 Map<int, UserSteps> users = {};
+Map<int, String> admins = {
+  179975021 : "Farxod aka",
+  386490112 : "SQ ADMIN",
+  364790033 : "SQ ADMIN",
+  475409665 : "OWNER",
+};
 
-void mainTelegram() async {
+Future<void> mainTelegram() async {
   await start(
     onStart: () {
       // Command : START
@@ -41,8 +47,6 @@ void mainTelegram() async {
 
       // STEPS
       bot.onMessage().listen((message) async {
-        print(message.chat.id);
-        print(message.text);
         secondStep(
           message,
           onContactSend: (String name, String lastName) {
@@ -69,7 +73,7 @@ void mainTelegram() async {
 
       // QR CODE
       bot.onMessage().listen((event) async {
-        if (event.chat.id == 475409665) {
+        if (admins.containsKey(event.chat.id)) {
           final name = event.text?.split(' ');
           if (name != null && name.length == 2) {
             final image = await textQrImage(name[0], name[1]);
@@ -87,18 +91,18 @@ void mainTelegram() async {
 
 Future<void> start({required void Function() onStart, required void Function() onError}) async {
   try {
-    print("Running Telegram Bot...");
+    LogService.writeLog("Running Telegram Bot...");
 
     var botToken = '7372481455:AAFQtbgzYFkBg2OLxLpe0KQ0Qm0wuEnx_Y4';
     final username = (await Telegram(botToken).getMe()).username;
     bot = TeleDart(botToken, Event(username!));
     bot.start();
-    print("Starting bot SQ");
+    LogService.writeLog("Starting bot SQ");
     onStart();
   } catch (e, s) {
-    print("SQ botdan error keldi");
-    print(e);
-    print(s);
+    LogService.writeLog("SQ botdan error keldi");
+    LogService.writeLog(e.toString());
+    LogService.writeLog(s.toString());
     onError();
   }
 }

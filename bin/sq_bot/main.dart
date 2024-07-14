@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'telegram/telegram.dart';
+import '../log_service/log_service.dart';
 
 void mainSQ(List args) async {
   await runZonedGuarded(
@@ -8,15 +9,15 @@ void mainSQ(List args) async {
       Timer.periodic(
         Duration(minutes: 5),
         (timer) {
-          print(DateTime.now().toString());
+          LogService.writeLog(DateTime.now().toString());
         },
       );
-      mainTelegram();
+      await mainTelegram();
     },
     (error, stack) async {
       print(error);
       print(stack);
-      // await LogService.writeESLOG(error, stack);
+      await LogService.writeESLOG(error, stack);
     },
   );
 }

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:isolate';
 
-import 'log_service/log_service.dart';
+import '../log_service/log_service.dart';
 import 'server/main.dart';
 import 'storage/storage.dart';
 import 'telegram/telegram.dart';
@@ -16,7 +16,7 @@ void mainTmed(List args) async {
       Timer.periodic(
         Duration(minutes: 5),
         (timer) {
-          print(DateTime.now().toLocal().toString());
+          LogService.writeLog(DateTime.now().toLocal().toString());
         },
       );
       await Storage.initStorage();

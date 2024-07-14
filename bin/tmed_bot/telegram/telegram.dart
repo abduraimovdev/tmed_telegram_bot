@@ -5,6 +5,7 @@ import 'package:teledart/telegram.dart';
 import '../storage/storage.dart';
 import 'reply_markup.dart';
 import '../storage/sql/sql.dart';
+import '../../log_service/log_service.dart';
 
 late TeleDart tmedBot;
 int a = 0;
@@ -17,7 +18,7 @@ void mainTelegramTmed() async {
   final username = (await Telegram(botToken).getMe()).username;
   tmedBot = TeleDart(botToken, Event(username!));
   tmedBot.start();
-  print("Starting bot TMED");
+  LogService.writeLog("Starting bot TMED");
 
   tmedBot.onMessage(entityType: 'bot_command', keyword: 'start').listen(
     (message) async {
