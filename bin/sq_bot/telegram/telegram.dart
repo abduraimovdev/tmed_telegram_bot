@@ -73,6 +73,7 @@ Future<void> mainTelegram() async {
 
       // QR CODE
       bot.onMessage().listen((event) async {
+        print(event.chat.id);
         if (admins.containsKey(event.chat.id)) {
           final name = event.text?.split(' ');
           if (name != null && name.length == 2) {
