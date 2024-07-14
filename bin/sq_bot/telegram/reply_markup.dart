@@ -12,4 +12,14 @@ sealed class AppReplyMarkUps {
       ]
     ],
   );
+
+  static final start = ReplyKeyboardMarkup(
+    oneTimeKeyboard: true,
+    resizeKeyboard: true,
+    keyboard: [
+      [
+        KeyboardButton(text: "start"),
+      ]
+    ],
+  );
 }

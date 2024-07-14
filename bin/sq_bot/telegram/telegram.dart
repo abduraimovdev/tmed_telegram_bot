@@ -39,7 +39,14 @@ Future<void> mainTelegram() async {
           bot.sendPhoto(
             message.chat.id,
             "https://t.me/server_picture/546",
-            caption: "Assalomu alaykum \nHI TECH LAB Klinikasi botiga xush kelibsiz!\nUshbu bot orqali klinikamizda ko’rsatilayotgan xizmatlardan yo’ki xodimlar ish vaqtida sizga bo’lgan munosabatdan taklif va etirozingiz bo’lsa fikr mulohazalaringizni yuborishingiz mumkin!",
+            caption: """Assalomu alaykum HI TECH LAB Klinikasi botiga xush kelibsiz!
+Ushbu bot orqali klinikamizda ko’rsatilayotgan xizmatlardan yo’ki xodimlar ish vaqtida sizga bo’lgan munosabatdan taklif va etirozingiz bo’lsa fikr mulohazalaringizni yuborishingiz mumkin!
+Sizning xabaringiz tez ko’rib chiqiladi va javobini beramiz.
+
+Sog’ligingizni extiyot qiling! 
+Klinikamiz xizmatlaridan foydalanganingiz uchun tashakkur!
+
+Xabar qoldirish uchun telefon raqamingizni yuboring!""",
             replyMarkup: AppReplyMarkUps.none,
           );
         }
@@ -62,6 +69,12 @@ Future<void> mainTelegram() async {
             );
           },
           other: () {
+            bot.sendPhoto(
+              message.chat.id,
+              "https://t.me/server_picture/546",
+              caption: "Yangi xabar qoldirmoqchi bo’lsangiz, mutaxxassis QR kodini qayta skanerlang!",
+              replyMarkup: AppReplyMarkUps.none,
+            );
             // bot.sendMessage(
             //   message.chat.id,
             //   "Botdan foydalanish uchun shifokorning QR kodini kameraga yo'natiring",
@@ -86,7 +99,9 @@ Future<void> mainTelegram() async {
         }
       });
     },
-    onError: () {},
+    onError: () {
+
+    },
   );
 }
 
