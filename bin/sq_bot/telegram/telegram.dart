@@ -1,8 +1,13 @@
+import 'package:qr_image/qr_image.dart';
 import 'package:teledart/model.dart';
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
-
+import 'dart:io' as io;
 import 'reply_markup.dart';
+import './models/user_steps.dart';
+import 'package:image/image.dart';
+
+part './utils.dart';
 
 late TeleDart bot;
 int a = 0;
@@ -10,117 +15,121 @@ bool botStatus = false;
 Map<int, UserSteps> users = {};
 
 void mainTelegram() async {
-  print("Running Telegram Bot...");
-
-  var botToken = '7050031910:AAEQUt7SD8xfrs6hljJkbBhCUW6_N3htSkU';
-  final username = (await Telegram(botToken).getMe()).username;
-  bot = TeleDart(botToken, Event(username!));
-  bot.start();
-  print("Starting bot SQ");
-
-  bot
-      .onMessage(
-    entityType: 'bot_command',
-    keyword: 'start',
-  )
-      .listen((message) async {
-    final name = getUser(message.text ?? '');
-    if (name != null) {
-      // if (!users.containsKey(message.chat.id)) {
-      users[message.chat.id] = UserSteps(name: name.$1, lastName: name.$2, step: 1);
-      // }
-      bot.sendMessage(
-        message.chat.id,
-        "Iltimos Telefon raqamingizni yozing",
-        replyMarkup: AppReplyMarkUps.contact,
-      );
-    } else {
-      bot.sendMessage(
-        message.chat.id,
-        "Assalomu Aleykum botga xush kelibsiz botdan foydalanish uchun shifokorning QR kodini kameraga yo'natiring",
-      );
-    }
-  });
-
-  bot.onMessage().listen((message) async {
-    if (message.contact != null) {
-      if (users.containsKey(message.chat.id)) {
-        final doctor = users[message.chat.id];
-        if (doctor!.step == 1) {
-          users[message.chat.id] = users[message.chat.id]!.copyWith(
-            step: 2,
-            phone: message.contact!.phoneNumber,
+  await start(
+    onStart: () {
+      // Command : START
+      bot.onMessage(entityType: 'bot_command', keyword: 'start').listen((message) async {
+        final name = getUser(message.text ?? '');
+        if (name != null) {
+          // if (!users.containsKey(message.chat.id)) {
+          users[message.chat.id] = UserSteps(name: name.$1, lastName: name.$2, step: 1);
+          // }
+          bot.sendMessage(
+            message.chat.id,
+            "Xabar qoldirish uchun telefon raqamingizni yuboring!",
+            replyMarkup: AppReplyMarkUps.contact,
           );
-          message.reply(
-            'Iltimos bu (${doctor.name} ${doctor.lastName}) shifokor uchun fikringizni qoldiring !',
-
+        } else {
+          bot.sendPhoto(
+            message.chat.id,
+            "https://t.me/server_picture/546",
+            caption: "Assalomu alaykum \nHI TECH LAB Klinikasi botiga xush kelibsiz!\nUshbu bot orqali klinikamizda ko’rsatilayotgan xizmatlardan yo’ki xodimlar ish vaqtida sizga bo’lgan munosabatdan taklif va etirozingiz bo’lsa fikr mulohazalaringizni yuborishingiz mumkin!",
+            replyMarkup: AppReplyMarkUps.none,
           );
         }
-      }
-    } else {
-      if (users.containsKey(message.chat.id)) {
-        final doctor = users[message.chat.id];
-        if (doctor!.step == 2) {
-          sendData(users[message.chat.id]!.copyWith(step: 3, text: message.text));
-          users.remove(message.chat.id);
-          message.reply('Xulosangiz admin uchun yuborildi');
+      });
+
+      // STEPS
+      bot.onMessage().listen((message) async {
+        print(message.chat.id);
+        print(message.text);
+        secondStep(
+          message,
+          onContactSend: (String name, String lastName) {
+            message.reply(
+              'Iltimos ushbu ($name $lastName) xodim uchun fikringizni qoldiring!',
+              replyMarkup: AppReplyMarkUps.none,
+            );
+          },
+          onFinished: () {
+            message.reply(
+              'Sizning xabaringiz tez ko’rib chiqiladi va javobini beramiz.\n\nSog’ligingizni extiyot qiling!\nKlinikamiz xizmatlaridan foydalanganingiz uchun tashakkur!',
+              replyMarkup: AppReplyMarkUps.none,
+            );
+          },
+          other: () {
+            // bot.sendMessage(
+            //   message.chat.id,
+            //   "Botdan foydalanish uchun shifokorning QR kodini kameraga yo'natiring",
+            //   replyMarkup: AppReplyMarkUps.none,
+            // );
+          },
+        );
+      });
+
+      // QR CODE
+      bot.onMessage().listen((event) async {
+        if (event.chat.id == 475409665) {
+          final name = event.text?.split(' ');
+          if (name != null && name.length == 2) {
+            final image = await textQrImage(name[0], name[1]);
+            bot.sendDocument(
+              event.chat.id,
+              image,
+            );
+          }
         }
-      }
-    }
-  });
+      });
+    },
+    onError: () {},
+  );
 }
 
-(String name, String lastName)? getUser(String text) {
-  if (text.contains("0") && text.contains('1')) {
-    final startIndex = text.indexOf('0');
-    final name = (text.substring(startIndex + 1, text.length - 1)).split('1');
-    if (name.length == 2) {
-      print("Success");
-      return (name[1], name[0]);
-    } else {
-      return null;
+Future<void> start({required void Function() onStart, required void Function() onError}) async {
+  try {
+    print("Running Telegram Bot...");
+
+    var botToken = '7372481455:AAFQtbgzYFkBg2OLxLpe0KQ0Qm0wuEnx_Y4';
+    final username = (await Telegram(botToken).getMe()).username;
+    bot = TeleDart(botToken, Event(username!));
+    bot.start();
+    print("Starting bot SQ");
+    onStart();
+  } catch (e, s) {
+    print("SQ botdan error keldi");
+    print(e);
+    print(s);
+    onError();
+  }
+}
+
+void secondStep(
+  TeleDartMessage message, {
+  required void Function(String name, String lastName) onContactSend,
+  required void Function() onFinished,
+  required void Function() other,
+}) {
+  if (message.contact != null) {
+    if (users.containsKey(message.chat.id)) {
+      final doctor = users[message.chat.id];
+      if (doctor!.step == 1) {
+        users[message.chat.id] = users[message.chat.id]!.copyWith(
+          step: 2,
+          phone: message.contact!.phoneNumber,
+        );
+        onContactSend(doctor.name, doctor.lastName);
+      }
     }
   } else {
-    return null;
+    if (users.containsKey(message.chat.id)) {
+      final doctor = users[message.chat.id];
+      if (doctor!.step == 2) {
+        sendData(users[message.chat.id]!.copyWith(step: 3, text: message.text));
+        users.remove(message.chat.id);
+        onFinished();
+      }
+    } else {
+      other();
+    }
   }
-}
-
-class UserSteps {
-  final String name;
-  final String lastName;
-  final int step;
-  final String text;
-  final String phone;
-
-  const UserSteps({
-    this.name = '',
-    this.lastName = '',
-    this.step = 0,
-    this.text = '',
-    this.phone = '',
-  });
-
-  UserSteps copyWith({
-    String? name,
-    String? lastName,
-    int? step,
-    String? text,
-    String? phone,
-  }) {
-    return UserSteps(
-      name: name ?? this.name,
-      lastName: lastName ?? this.lastName,
-      step: step ?? this.step,
-      text: text ?? this.text,
-      phone: phone ?? this.phone,
-    );
-  }
-}
-
-void sendData(UserSteps data) {
-  bot.sendMessage('@sq_logs', """
-Shifokor : ${data.lastName} ${data.lastName}
-Jo'natuvchining raqami : ${data.phone}
-Shikoyati : ${data.text}
-""");
 }

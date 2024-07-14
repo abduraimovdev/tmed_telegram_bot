@@ -1,14 +1,7 @@
 import 'package:teledart/model.dart';
 
 sealed class AppReplyMarkUps {
-  static final myFiles = ReplyKeyboardMarkup(
-    resizeKeyboard: true,
-    keyboard: [
-      [
-        KeyboardButton(text: 'Xulosa olish'),
-      ]
-    ],
-  );
+  static final none = ReplyKeyboardRemove(removeKeyboard: true);
 
   static final contact = ReplyKeyboardMarkup(
     oneTimeKeyboard: true,
@@ -20,4 +13,3 @@ sealed class AppReplyMarkUps {
     ],
   );
 }
-
