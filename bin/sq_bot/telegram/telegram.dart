@@ -18,6 +18,7 @@ Map<int, String> admins = {
   386490112 : "SQ ADMIN",
   364790033 : "SQ ADMIN",
   475409665 : "OWNER",
+  1619314211 : "Farrux aka",
 };
 
 Future<void> mainTelegram() async {
