@@ -13,13 +13,13 @@ part './utils.dart';
 late TeleDart bot;
 bool botStatus = false;
 Map<int, UserSteps> users = {};
-Map<int, String> admins = {
+Map<num, String> admins = {
+  7013088721 : "Tizim Administrator",
   179975021 : "Farxod aka",
   386490112 : "SQ ADMIN",
   364790033 : "SQ ADMIN",
   475409665 : "OWNER",
   1619314211 : "Farrux aka",
-  7013088721 : "Tizim Administrator",
 };
 
 Future<void> mainTelegram() async {
