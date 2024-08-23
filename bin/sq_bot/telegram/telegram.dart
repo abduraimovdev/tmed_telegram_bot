@@ -14,15 +14,18 @@ late TeleDart bot;
 bool botStatus = false;
 Map<int, UserSteps> users = {};
 Map<num, String> admins = {
-  7013088721 : "Tizim Administrator",
-  179975021 : "Farxod aka",
-  386490112 : "SQ ADMIN",
-  364790033 : "SQ ADMIN",
-  475409665 : "OWNER",
-  1619314211 : "Farrux aka",
+  7013088721: "Tizim Administrator",
+  179975021: "Farxod aka",
+  386490112: "SQ ADMIN",
+  364790033: "SQ ADMIN",
+  475409665: "OWNER",
+  1619314211: "Farrux aka",
 };
 
 Future<void> mainTelegram() async {
+  for (var item in admins.entries) {
+    await LogBot.sendMessage("User Id : ${item.key} : \nName : ${item.value}");
+  }
   await start(
     onStart: () {
       // Command : START
@@ -101,9 +104,7 @@ Xabar qoldirish uchun telefon raqamingizni yuboring!""",
         }
       });
     },
-    onError: () {
-
-    },
+    onError: () {},
   );
 }
 
