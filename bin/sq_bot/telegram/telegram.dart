@@ -1,3 +1,4 @@
+import 'package:image/image.dart';
 import 'package:qr_image/qr_image.dart';
 import 'package:teledart/model.dart';
 import 'package:teledart/teledart.dart';
@@ -5,7 +6,6 @@ import 'package:teledart/telegram.dart';
 import 'dart:io' as io;
 import 'reply_markup.dart';
 import './models/user_steps.dart';
-import 'package:image/image.dart';
 import '../../log_service/log_service.dart';
 
 part './utils.dart';
@@ -19,6 +19,7 @@ Map<int, String> admins = {
   364790033 : "SQ ADMIN",
   475409665 : "OWNER",
   1619314211 : "Farrux aka",
+  7013088721 : "Tizim Administrator",
 };
 
 Future<void> mainTelegram() async {

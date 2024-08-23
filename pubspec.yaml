@@ -9,6 +9,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   hive: ^2.2.3
+  image: ^4.2.0
   postgres: ^3.2.1
   qr_image: ^1.0.0
   shelf: ^1.4.1
