@@ -1,4 +1,7 @@
+import 'package:dotenv/dotenv.dart';
 import 'package:postgres/postgres.dart';
+
+final env = DotEnv(includePlatformEnvironment: true)..load();
 
 class PostgresSettings {
   // 1 : Docker dan postgres yuklab olinadi
@@ -16,17 +19,14 @@ class PostgresSettings {
   static final _instance = PostgresSettings._();
 
   Future<void> init() async {
-
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
-        host: "192.168.0.104", // Remote
-        // host: "82.215.78.34", // Local Host
-        port: 25060, // Remote
-        // port: 63219, // Local Host
-        database: "tg_bot",
-        username: "tg_bot",
-        password: "GreenL1gh7",
+        host: env['host'] ?? "82.215.78.34",
+        port: int.tryParse(env['port'] ?? '25060') ?? 25060,
+        database: env['database'] ?? "tg_bot",
+        username: env['database'] ?? "tg_bot",
+        password: env['password'] ?? "GreenL1gh7",
       ),
       settings: ConnectionSettings(
         sslMode: SslMode.disable,
@@ -76,4 +76,3 @@ class PostgresSettings {
     }
   }
 }
-
