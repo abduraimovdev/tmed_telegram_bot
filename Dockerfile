@@ -1,4 +1,4 @@
-FROM dart:stable as builder
+FROM dart:stable AS builder
 
 COPY . /tmed_tg
 
