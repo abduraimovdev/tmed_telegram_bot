@@ -24,7 +24,7 @@ jobs:
           host: ${{ vars.SSH_HOST }}
           port: ${{ vars.SSH_PORT }}
           username: ${{ vars.SSH_USER }}
-          key_path: ${{ vars.SSH_FILE_NAME }}
+          #key_path: ${{ vars.SSH_FILE_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e  # Exit on error
@@ -51,7 +51,7 @@ jobs:
           host: ${{ vars.SSH_HOST }}
           port: ${{ vars.SSH_PORT }}
           username: ${{ vars.SSH_USER }}
-          key_path: ${{ vars.SSH_FILE_NAME }}
+          #key_path: ${{ vars.SSH_FILE_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e  # Exit on error
