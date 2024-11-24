@@ -2,7 +2,7 @@ name: Github Actions CI/CD
 
 on:
   push:
-    branches: ['development']
+    branches: ['main']
 
 jobs:
   build_and_push:
@@ -12,7 +12,7 @@ jobs:
       packages: write
     strategy:
       matrix:
-        environment: [development]
+        environment: [main]
     #environment: ${{ matrix.environment }}
     steps:
       - name: Checkout code
@@ -42,7 +42,7 @@ jobs:
       packages: write
     strategy:
       matrix:
-        environment: [development]
+        environment: [main]
     #environment: ${{ matrix.environment }}
     steps:
       - name: Executing remote SSH commands to deploy
