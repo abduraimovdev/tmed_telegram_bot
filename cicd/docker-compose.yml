@@ -2,7 +2,7 @@ version: '3.9'
 services:
   tmed_telegram_bot:
     build:
-      context: /
+      context: .
       dockerfile: ../Dockerfile
     ports:
       - 5000:8080
