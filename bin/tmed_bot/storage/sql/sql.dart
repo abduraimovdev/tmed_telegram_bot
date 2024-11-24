@@ -22,11 +22,11 @@ class PostgresSettings {
     print("Connecting... SQL SERVER");
     _connection = await Connection.open(
       Endpoint(
-        host: env['host'] ?? "82.215.78.34",
-        port: int.tryParse(env['port'] ?? '25060') ?? 25060,
-        database: env['database'] ?? "tg_bot",
-        username: env['database'] ?? "tg_bot",
-        password: env['password'] ?? "GreenL1gh7",
+        host: env['db_host'] ?? "82.215.78.34",
+        port: int.tryParse(env['db_port'] ?? '25060') ?? 25060,
+        database: env['db_database'] ?? "tg_bot",
+        username: env['db_username'] ?? "tg_bot",
+        password: env['db_password'] ?? "GreenL1gh7",
       ),
       settings: ConnectionSettings(
         sslMode: SslMode.disable,
