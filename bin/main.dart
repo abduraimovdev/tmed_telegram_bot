@@ -6,6 +6,7 @@ import './log_service/log_service.dart';
 
 final env = DotEnv(includePlatformEnvironment: true)..load();
 void main(List args) async {
+  print(args);
   print("--------------------------------------------");
   print(env['host']);
   print("--------------------------------------------");

@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:isolate';
 
 import '../log_service/log_service.dart';
 import 'server/main.dart';
