@@ -20,6 +20,8 @@ class PostgresSettings {
 
   Future<void> init() async {
     print("Connecting... SQL SERVER");
+  print(env['host']);
+
     _connection = await Connection.open(
       Endpoint(
         host: env['db_host'] ?? "82.215.78.34",

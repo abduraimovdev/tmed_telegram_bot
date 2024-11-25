@@ -6,6 +6,9 @@ import './log_service/log_service.dart';
 
 final env = DotEnv(includePlatformEnvironment: true)..load();
 void main(List args) async {
+  print("--------------------------------------------");
+  print(env['host']);
+  print("--------------------------------------------");
   await LogBot.init();
   mainTmed(args);
   mainSQ(args);
