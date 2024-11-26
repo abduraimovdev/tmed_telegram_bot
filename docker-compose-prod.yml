@@ -10,5 +10,5 @@ services:
       db_host: "192.168.88.3"
       db_port: "25060"
       db_database: "tg_bot"
-      db_username: "tg_bot_user"
+      db_username: "tg_bot"
       db_password: "tg_bot_edcyhn@1"
