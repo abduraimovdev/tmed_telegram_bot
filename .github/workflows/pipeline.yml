@@ -55,7 +55,7 @@ jobs:
             set -e  # Exit on error
             echo "DEPLOY STARTED"
             cd "${{ vars.APP_DIRECTORY }}"
-            docker compose up -d --no-deps --build
+            docker compose -f docker-compose-prod.yml up -d --no-deps --build
             #docker compose down || true
             #docker compose up -d
             echo "DEPLOY FINISHED"
