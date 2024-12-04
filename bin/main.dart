@@ -23,7 +23,7 @@ void main(List args) async {
 
 
 
-void runBot(List args) {
+void runBot(List args) async{
   try {
     print(args);
     print("--------------------------------------------");
