@@ -17,7 +17,7 @@ class MyHttpOverrides extends HttpOverrides {
 final env = DotEnv(includePlatformEnvironment: true)..load();
 void main(List args) async {
   while(true) {
-    runBot();
+    runBot(args);
   }
 }
 
