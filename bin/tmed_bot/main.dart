@@ -5,7 +5,7 @@ import 'server/main.dart';
 import 'storage/storage.dart';
 import 'telegram/telegram.dart';
 
-void mainTmed(List args) async {
+Future<void> mainTmed(List args) async {
   await LogService.init();
 
   await runZonedGuarded(

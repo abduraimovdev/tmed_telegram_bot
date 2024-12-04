@@ -3,7 +3,7 @@ import 'dart:async';
 import 'telegram/telegram.dart';
 import '../log_service/log_service.dart';
 
-void mainSQ(List args) async {
+Future<void> mainSQ(List args) async {
   await runZonedGuarded(
     () async {
       Timer.periodic(

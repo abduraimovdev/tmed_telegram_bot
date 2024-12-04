@@ -5,40 +5,47 @@ import './log_service/log_service.dart';
 import './tmed_bot/main.dart';
 import './sq_bot/main.dart';
 
-
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+    return super.createHttpClient(context)..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
   }
 }
 
 final env = DotEnv(includePlatformEnvironment: true)..load();
 void main(List args) async {
-  while(true) {
-    runBot(args);
-  }
+  print(args);
+  runBot(
+    bot: mainSQ,
+    botName: "SQ",
+    args: args,
+  );
+  runBot(
+    bot: mainTmed,
+    botName: "TMED",
+    args: args,
+  );
 }
 
+void runBot({
+  required Future<void> Function(List args) bot,
+  required String botName,
+  required List args,
+}) async {
+  while (true) {
+    try {
 
-
-void runBot(List args) async{
-  try {
-    print(args);
-    print("--------------------------------------------");
-    print(env['host']);
-    print("--------------------------------------------");
-    await LogBot.init();
-    mainTmed(args);
-    mainSQ(args);
-  } catch (e, s) {
-    print(
-        "-----------------------------ERROR---------------------------------");
-    print(e);
-    print(s);
-    print(
-        "-----------------------------ERROR END---------------------------------");
-    main(args);
+      print("------------------------------------------------$botName------------------------------------------------------------");
+      print("----------------HOST----------------------------");
+      print(env['host']);
+      print("--------------------------------------------");
+      await LogBot.init();
+      await bot(args);
+    } catch (e, s) {
+      print("-----------------------------ERROR---------------------------------");
+      print(e);
+      print(s);
+      print("-----------------------------ERROR END---------------------------------");
+    }
   }
 }
