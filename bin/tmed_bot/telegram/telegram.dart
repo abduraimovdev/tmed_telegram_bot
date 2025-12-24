@@ -1,3 +1,4 @@
+import 'package:dotenv/dotenv.dart';
 import 'package:teledart/model.dart';
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
@@ -7,6 +8,8 @@ import 'reply_markup.dart';
 import '../storage/sql/sql.dart';
 import '../../log_service/log_service.dart';
 
+final env = DotEnv(includePlatformEnvironment: true)..load();
+
 late TeleDart tmedBot;
 int a = 0;
 bool botStatus = false;
@@ -14,7 +17,11 @@ bool botStatus = false;
 void mainTelegramTmed() async {
   print("Running Telegram Bot...");
 
-  var botToken = '7160370195:AAG2H4soUx2ZaOpSjNOkb7bARdqFXhfTLUY';
+  var botToken = env['tmed_bot_token'] ?? '';
+  if (botToken.isEmpty) {
+    print("TMED Bot: tmed_bot_token not set, skipping");
+    return;
+  }
   final username = (await Telegram(botToken).getMe()).username;
   tmedBot = TeleDart(botToken, Event(username!));
   tmedBot.start();

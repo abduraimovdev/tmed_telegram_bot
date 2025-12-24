@@ -1,3 +1,4 @@
+import 'package:dotenv/dotenv.dart';
 import 'package:image/image.dart';
 import 'package:qr_image/qr_image.dart';
 import 'package:teledart/model.dart';
@@ -7,6 +8,8 @@ import 'dart:io' as io;
 import 'reply_markup.dart';
 import './models/user_steps.dart';
 import '../../log_service/log_service.dart';
+
+final env = DotEnv(includePlatformEnvironment: true)..load();
 
 part './utils.dart';
 
@@ -112,7 +115,11 @@ Future<void> start({required void Function() onStart, required void Function() o
   try {
     LogService.writeLog("Running Telegram Bot...");
 
-    var botToken = '7372481455:AAFQtbgzYFkBg2OLxLpe0KQ0Qm0wuEnx_Y4';
+    var botToken = env['sq_bot_token'] ?? '';
+    if (botToken.isEmpty) {
+      print("SQ Bot: sq_bot_token not set, skipping");
+      return;
+    }
     final username = (await Telegram(botToken).getMe()).username;
     bot = TeleDart(botToken, Event(username!));
     bot.start();

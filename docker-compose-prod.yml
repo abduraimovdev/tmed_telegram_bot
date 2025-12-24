@@ -14,3 +14,5 @@ services:
       db_username: ""
       db_password: ""
       tg_token: ""
+      tmed_bot_token: ""
+      sq_bot_token: ""
