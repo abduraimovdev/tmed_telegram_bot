@@ -32,14 +32,9 @@ jobs:
         run: |
           echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
 
-      - name: Pull previous image for cache
-        run: |
-          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} || true
-
       - name: Build Docker image
         run: |
-          DOCKER_BUILDKIT=1 docker build \
-            --cache-from ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} \
+          DOCKER_BUILDKIT=1 docker build --no-cache \
             -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} \
             -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
 
