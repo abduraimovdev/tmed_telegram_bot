@@ -4,6 +4,8 @@ import 'dart:io';
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
 
+final env = DotEnv(includePlatformEnvironment: true)..load();
+
 class LogService {
   static final File file = File("bin/log_service/log.txt");
 
@@ -47,9 +49,8 @@ class LogBot {
   static bool isInitialized = false;
 
   static Future<void> init() async {
-    var botToken = '7175999350:AAHnib0ioHi37o9iEpq2CUlr4oe2pcCCQ6k';
-    bot = TeleDart(botToken, Event((await Telegram(botToken).getMe()).username!));
-    isInitialized = true;
+    bot = TeleDart(env['tg_token'], Event((await Telegram(env['tg_token']).getMe()).username!));
+    isInitialized = true; 
   }
 
   static Future<void> sendMessage(String text) async {
