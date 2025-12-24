@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY: registry.eascompany.uz
-  IMAGE_NAME: dwed/tmed_telegram_bot
+  IMAGE_NAME: dwed/tg_bot
   APP_SERVER: app.backend-service.dwed
   APP_USER: ubuntu
 
