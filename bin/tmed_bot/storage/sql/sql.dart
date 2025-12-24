@@ -20,15 +20,15 @@ class PostgresSettings {
 
   Future<void> init() async {
     print("Connecting... SQL SERVER");
-  print(env['host']);
+  print(env['db_host']);
 
     _connection = await Connection.open(
       Endpoint(
-        host: env['db_host'] ?? "82.215.78.34",
-        port: int.tryParse(env['db_port'] ?? '25060') ?? 25060,
-        database: env['db_database'] ?? "tg_bot",
-        username: env['db_username'] ?? "tg_bot",
-        password: env['db_password'] ?? "GreenL1gh7",
+        host: env['db_host'] ?? "0.0.0.0",
+        port: int.tryParse(env['db_port'] ?? '5432') ?? 5432,
+        database: env['db_database'],
+        username: env['db_username'],
+        password: env['db_password'],
       ),
       settings: ConnectionSettings(
         sslMode: SslMode.disable,
