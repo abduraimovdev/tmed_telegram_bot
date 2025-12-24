@@ -7,8 +7,8 @@ services:
     ports:
       - 5000:8080
     environment:
-      db_host: "192.168.88.3"
-      db_port: "25060"
-      db_database: "tg_bot"
-      db_username: "tg_bot_user"
-      db_password: "tg_bot_edcyhn@1"
+      db_host: ""
+      db_port: ""
+      db_database: ""
+      db_username: ""
+      db_password: ""
