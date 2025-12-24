@@ -9,9 +9,9 @@ import 'reply_markup.dart';
 import './models/user_steps.dart';
 import '../../log_service/log_service.dart';
 
-final env = DotEnv(includePlatformEnvironment: true)..load();
-
 part './utils.dart';
+
+final env = DotEnv(includePlatformEnvironment: true)..load();
 
 late TeleDart bot;
 bool botStatus = false;
