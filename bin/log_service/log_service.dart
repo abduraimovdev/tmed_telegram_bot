@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:dotenv/dotenv.dart';
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
 
@@ -49,8 +50,13 @@ class LogBot {
   static bool isInitialized = false;
 
   static Future<void> init() async {
-    bot = TeleDart(env['tg_token'], Event((await Telegram(env['tg_token']).getMe()).username!));
-    isInitialized = true; 
+    final token = env['tg_token'] ?? '';
+    if (token.isEmpty) {
+      print("LogBot: tg_token not set, skipping initialization");
+      return;
+    }
+    bot = TeleDart(token, Event((await Telegram(token).getMe()).username!));
+    isInitialized = true;
   }
 
   static Future<void> sendMessage(String text) async {

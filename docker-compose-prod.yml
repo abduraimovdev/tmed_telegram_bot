@@ -13,3 +13,4 @@ services:
       db_database: ""
       db_username: ""
       db_password: ""
+      tg_token: ""
