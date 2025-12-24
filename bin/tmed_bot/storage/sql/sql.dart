@@ -26,9 +26,9 @@ class PostgresSettings {
       Endpoint(
         host: env['db_host'] ?? "0.0.0.0",
         port: int.tryParse(env['db_port'] ?? '5432') ?? 5432,
-        database: env['db_database'],
-        username: env['db_username'],
-        password: env['db_password'],
+        database: env['db_database'] ?? "tg_bot",
+        username: env['db_username'] ?? "app_user",
+        password: env['db_password'] ?? "",
       ),
       settings: ConnectionSettings(
         sslMode: SslMode.disable,
