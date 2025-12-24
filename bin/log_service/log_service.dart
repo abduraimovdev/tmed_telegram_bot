@@ -54,7 +54,11 @@ class LogBot {
 
   static Future<void> sendMessage(String text) async {
     if (isInitialized) {
-      await bot.sendMessage("@lo0gs", text);
+      try {
+        await bot.sendMessage("@lo0gs", text);
+      } catch (e) {
+        print("LogBot sendMessage error: $e");
+      }
     }
   }
 }
