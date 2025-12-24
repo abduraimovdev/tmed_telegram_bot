@@ -1,0 +1,77 @@
+name: tmed_telegram_bot CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  REGISTRY: registry.eascompany.uz
+  IMAGE_NAME: dwed/tmed_telegram_bot
+  APP_SERVER: app.backend-service.dwed
+  APP_USER: ubuntu
+
+jobs:
+  build-and-push:
+    runs-on:
+      - self-hosted
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Extract branch name
+        id: branch
+        run: echo "name=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+
+      - name: Login to Private Registry
+        run: |
+          echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
+
+      - name: Pull previous image for cache
+        run: |
+          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} || true
+
+      - name: Build Docker image
+        run: |
+          DOCKER_BUILDKIT=1 docker build \
+            --cache-from ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} \
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }} \
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-${{ steps.branch.outputs.name }}
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+  deploy:
+    needs: build-and-push
+    runs-on:
+      - self-hosted
+    environment: production
+    
+    steps:
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ env.APP_SERVER }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Production
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ env.APP_USER }}@${{ env.APP_SERVER }} << 'EOF'
+            set -e
+            sudo docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }} ${{ env.REGISTRY }}
+            sudo docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            sudo docker service update --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} Production_backend_tg_bot --with-registry-auth
+            sudo docker logout ${{ env.REGISTRY }}
+          EOF
+
+      - name: Cleanup SSH Key
+        if: always()
+        run: rm -f ~/.ssh/id_ed25519
