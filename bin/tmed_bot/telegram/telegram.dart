@@ -30,18 +30,15 @@ void mainTelegramTmed() async {
   tmedBot.onMessage(entityType: 'bot_command', keyword: 'start').listen(
     (message) async {
       if (await Storage.checkUser(message.chat.id)) {
-        tmedBot.sendPhoto(
+        tmedBot.sendMessage(
           message.chat.id,
-          "https://t.me/t_med_log/3330",
-          caption: "O’zbekiston Temir Yo’llari Ijtimoiy Xizmatlar Muassasasi \nTMED botiga xush kelibsiz\n\nXulosangizni olish uchun iltimos telefon raqamingizni yuboring",
+          "O'zbekiston Temir Yo'llari Ijtimoiy Xizmatlar Muassasasi \nTMED botiga xush kelibsiz\n\nXulosangizni olish uchun iltimos telefon raqamingizni yuboring",
           replyMarkup: AppReplyMarkUps.myFiles,
         );
       } else {
-
-        tmedBot.sendPhoto(
+        tmedBot.sendMessage(
           message.chat.id,
-          "https://t.me/t_med_log/3330",
-          caption: "O’zbekiston Temir Yo’llari Ijtimoiy Xizmatlar Muassasasi \nTMED botiga xush kelibsiz\n\nXulosangizni olish uchun iltimos telefon raqamingizni yuboring",
+          "O'zbekiston Temir Yo'llari Ijtimoiy Xizmatlar Muassasasi \nTMED botiga xush kelibsiz\n\nXulosangizni olish uchun iltimos telefon raqamingizni yuboring",
           replyMarkup: AppReplyMarkUps.contact,
         );
       }
