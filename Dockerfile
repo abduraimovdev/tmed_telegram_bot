@@ -10,8 +10,8 @@ RUN dart pub get
 # Copy source code
 COPY . .
 
-# Compile to native executable
-RUN dart compile exe ./bin/main.dart -o ./build/bot
+# Create build directory and compile to native executable
+RUN mkdir -p build && dart compile exe ./bin/main.dart -o ./build/bot
 
 # Runtime stage - minimal image
 FROM debian:bookworm-slim
