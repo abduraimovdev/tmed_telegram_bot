@@ -181,12 +181,20 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
       if (files.isEmpty) {
         await message.reply("📭 Xulosa yo'q");
       } else {
-        await message.reply("📋 Sizda ${files.length} ta xulosa mavjud:");
-        
         for (int i = 0; i < files.length; i++) {
-          // Faqat link sifatida yuborish (eng ishonchli usul)
-          await message.reply("📄 ${i + 1}-xulosa:\n${files[i].fileUrl}");
-          await Future.delayed(Duration(milliseconds: 200));
+          try {
+            // Avval PDF fayl sifatida yuborishga urinish
+            await tmedBot.sendDocument(
+              message.chat.id, 
+              files[i].fileUrl, 
+              caption: "📄 ${i + 1}-xulosa"
+            );
+          } catch (e) {
+            // Agar PDF yuborib bo'lmasa, link sifatida yuborish
+            print("⚠️ PDF yuborib bo'lmadi, link yuborilmoqda: $e");
+            await message.reply("📄 ${i + 1}-xulosa:\n${files[i].fileUrl}");
+          }
+          await Future.delayed(Duration(milliseconds: 300));
         }
       }
     } else {
