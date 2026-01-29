@@ -1,3 +1,4 @@
+import 'dart:io' as io;
 import 'package:dotenv/dotenv.dart';
 import 'package:teledart/model.dart';
 import 'package:teledart/teledart.dart';
@@ -181,13 +182,34 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
       if (files.isEmpty) {
         await message.reply("Xulosa yo'q");
       } else {
+        await message.reply("📄 ${files.length} ta xulosa topildi, yuklanmoqda...");
+        
         for (int i = 0; i < files.length; i++) {
-          await tmedBot.sendDocument(
-            message.chat.id, 
-            files[i].fileUrl, 
-            caption: "${i + 1} : Xulosa"
-          );
-          await Future.delayed(Duration(milliseconds: 200));
+          try {
+            // PDF ni yuklab olish
+            final pdfFile = await _downloadPdf(files[i].fileUrl, i);
+            
+            if (pdfFile != null) {
+              // Fayl sifatida yuborish
+              await tmedBot.sendDocument(
+                message.chat.id, 
+                pdfFile,
+                caption: "${i + 1}-xulosa"
+              );
+              
+              // Vaqtinchalik faylni o'chirish
+              try {
+                await pdfFile.delete();
+              } catch (_) {}
+            } else {
+              await message.reply("❌ ${i + 1}-xulosani yuklab bo'lmadi");
+            }
+            
+            await Future.delayed(Duration(milliseconds: 500));
+          } catch (e) {
+            print("❌ Fayl yuborishda xato [$i]: $e");
+            await message.reply("❌ ${i + 1}-xulosani yuborishda xatolik");
+          }
         }
       }
     } else {
@@ -196,5 +218,42 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
   } catch (e) {
     print("❌ getMyConclusion xatosi: $e");
     await message.reply("Xatolik yuz berdi, iltimos qayta urinib ko'ring.");
+  }
+}
+
+/// URL dan PDF yuklab olish
+Future<io.File?> _downloadPdf(String url, int index) async {
+  try {
+    print("📥 PDF yuklanmoqda: $url");
+    
+    final httpClient = io.HttpClient()
+      ..badCertificateCallback = (cert, host, port) => true;  // SSL muammolarini o'tkazish
+    
+    final request = await httpClient.getUrl(Uri.parse(url));
+    final response = await request.close();
+    
+    if (response.statusCode == 200) {
+      // Vaqtinchalik fayl yaratish
+      final tempDir = io.Directory.systemTemp;
+      final fileName = 'xulosa_${DateTime.now().millisecondsSinceEpoch}_$index.pdf';
+      final file = io.File('${tempDir.path}/$fileName');
+      
+      // Faylga yozish
+      final bytes = await response.fold<List<int>>(
+        <int>[],
+        (List<int> previous, List<int> element) => previous..addAll(element),
+      );
+      
+      await file.writeAsBytes(bytes);
+      print("✅ PDF yuklandi: ${file.path} (${bytes.length} bytes)");
+      
+      return file;
+    } else {
+      print("❌ PDF yuklab bo'lmadi: HTTP ${response.statusCode}");
+      return null;
+    }
+  } catch (e) {
+    print("❌ PDF yuklash xatosi: $e");
+    return null;
   }
 }
