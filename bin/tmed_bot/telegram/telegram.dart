@@ -179,21 +179,14 @@ Future<void> getMyConclusion(TeleDartMessage message) async {
     if (await Storage.checkUser(message.chat.id)) {
       final files = await Storage.getUserFiles(message.chat.id);
       if (files.isEmpty) {
-        await message.reply("Xulosa yo'q");
+        await message.reply("📭 Xulosa yo'q");
       } else {
+        await message.reply("📋 Sizda ${files.length} ta xulosa mavjud:");
+        
         for (int i = 0; i < files.length; i++) {
-          try {
-            await tmedBot.sendDocument(
-              message.chat.id, 
-              files[i].fileUrl, 
-              caption: "${i + 1}-xulosa"
-            );
-            await Future.delayed(Duration(milliseconds: 300));
-          } catch (e) {
-            print("❌ Fayl yuborishda xato [$i]: $e");
-            // Xatolik bo'lsa faqat linkni yuborish
-            await message.reply("${i + 1}-xulosa: ${files[i].fileUrl}");
-          }
+          // Faqat link sifatida yuborish (eng ishonchli usul)
+          await message.reply("📄 ${i + 1}-xulosa:\n${files[i].fileUrl}");
+          await Future.delayed(Duration(milliseconds: 200));
         }
       }
     } else {
