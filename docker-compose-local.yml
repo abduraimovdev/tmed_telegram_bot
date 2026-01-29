@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: tmed_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tg_bot
+      POSTGRES_USER: tg_bot_user
+      POSTGRES_PASSWORD: tg_bot_edcyhn@1
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tg_bot_user -d tg_bot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Adminer - Database boshqarish uchun web UI
+  adminer:
+    image: adminer
+    container_name: tmed_adminer
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

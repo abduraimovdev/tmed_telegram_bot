@@ -113,23 +113,38 @@ Xabar qoldirish uchun telefon raqamingizni yuboring!""",
 
 Future<void> start({required void Function() onStart, required void Function() onError}) async {
   try {
-    LogService.writeLog("Running Telegram Bot...");
+    print("🤖 SQ Telegram Bot ishga tushmoqda...");
 
     var botToken = env['sq_bot_token'] ?? '';
     if (botToken.isEmpty) {
-      print("SQ Bot: sq_bot_token not set, skipping");
+      print("⚠️ SQ Bot: sq_bot_token topilmadi, o'tkazib yuborilmoqda");
       return;
     }
-    final username = (await Telegram(botToken).getMe()).username;
-    bot = TeleDart(botToken, Event(username!));
+    
+    final telegram = Telegram(botToken);
+    final me = await telegram.getMe();
+    final username = me.username;
+    
+    if (username == null) {
+      throw Exception("Bot username olib bo'lmadi");
+    }
+    
+    print("✅ SQ Bot topildi: @$username");
+    
+    bot = TeleDart(botToken, Event(username));
     bot.start();
-    LogService.writeLog("Starting bot SQ");
+    
+    await LogService.writeLog("✅ SQ Bot ishga tushdi: @$username");
+    print("✅ SQ Bot muvaffaqiyatli ishga tushdi!");
+    
     onStart();
   } catch (e, s) {
-    LogService.writeLog("SQ botdan error keldi");
-    LogService.writeLog(e.toString());
-    LogService.writeLog(s.toString());
+    print("❌ SQ Bot ishga tushishda xato: $e");
+    print(s);
+    await LogService.writeLog("❌ SQ botdan xato: $e");
+    await LogService.writeESLOG(e, s);
     onError();
+    rethrow;
   }
 }
 

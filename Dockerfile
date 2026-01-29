@@ -1,18 +1,36 @@
+# Build stage
 FROM dart:stable AS builder
 
-COPY . /tmed_tg
+WORKDIR /app
 
-WORKDIR /tmed_tg
-
-RUN mkdir build
-
+# Copy pubspec first for better caching
+COPY pubspec.* ./
 RUN dart pub get
 
-RUN dart pub global activate dotenv
+# Copy source code
+COPY . .
 
-RUN dart compile exe ./bin/main.dart -o ./build/dartserve
+# Compile to native executable
+RUN dart compile exe ./bin/main.dart -o ./build/bot
 
-#FROM debian:buster-slim
-#COPY --from=builder /tmed_tg/build/ /bin
-EXPOSE 8080
-CMD ["./build/dartserve"]
+# Runtime stage - minimal image
+FROM debian:bookworm-slim
+
+# Install required dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy compiled binary
+COPY --from=builder /app/build/bot /app/bot
+
+# Railway PORT muhit o'zgaruvchisi
+ENV PORT=8080
+
+# Health check uchun
+EXPOSE ${PORT}
+
+# Run the bot
+CMD ["./bot"]

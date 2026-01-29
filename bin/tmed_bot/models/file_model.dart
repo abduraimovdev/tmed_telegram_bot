@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:postgres/postgres.dart';
 
 import '../storage/sql/sql.dart';

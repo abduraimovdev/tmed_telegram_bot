@@ -2,15 +2,28 @@ import 'package:shelf/shelf_io.dart' as shelf_io;
 import '../../log_service/log_service.dart';
 import 'service.dart';
 
-/// Similar with the previous example but here we create the routing in our new class 'Service' and we call its handler.
-void mainServer(String? host, int? port) async {
-  LogService.writeLog("Running Server...");
+/// HTTP Server ishga tushirish
+Future<void> mainServer(String? host, int? port) async {
+  final serverHost = host ?? '0.0.0.0';  // Railway uchun 0.0.0.0 kerak
+  final serverPort = port ?? 8080;
+  
+  await LogService.writeLog("🌐 HTTP Server ishga tushmoqda...");
 
-  final service = Service();
+  try {
+    final service = Service();
+    final server = await shelf_io.serve(
+      service.handler, 
+      serverHost, 
+      serverPort,
+    );
 
-  final server = await shelf_io.serve(service.handler,  host ?? '0.0.0.0', port ?? 8080);
-
-  await LogService.writeLog("Serving at http://${server.address.host}:${server.port}");
-
-  print('Serving at http://${server.address.host}:${server.port}');
+    await LogService.writeLog("✅ Server ishga tushdi: http://${server.address.host}:${server.port}");
+    print('✅ HTTP Server: http://${server.address.host}:${server.port}');
+    
+  } catch (e, s) {
+    print("❌ HTTP Server ishga tushishda xato: $e");
+    print(s);
+    await LogService.writeESLOG(e, s);
+    rethrow;
+  }
 }

@@ -10,7 +10,8 @@ class PostgresSettings {
   // 4 : localhost dan adminerga kirib  postgresga ulanib ko'riladi
   // 5 : va ko'd orqali tekshiriladi
 
-  static late Connection _connection;
+  static Connection? _connection;
+  static bool _isConnecting = false;
 
   PostgresSettings._();
 
@@ -18,32 +19,91 @@ class PostgresSettings {
 
   static final _instance = PostgresSettings._();
 
+  /// Database ulanishini yaratish (retry bilan)
   Future<void> init() async {
-    print("Connecting... SQL SERVER");
-  print(env['db_host']);
+    if (_connection != null && _connection!.isOpen) {
+      print("✅ Database allaqachon ulangan");
+      return;
+    }
 
-    _connection = await Connection.open(
-      Endpoint(
-        host: env['db_host'] ?? "0.0.0.0",
-        port: int.tryParse(env['db_port'] ?? '5432') ?? 5432,
-        database: env['db_database'] ?? "tg_bot",
-        username: env['db_username'] ?? "app_user",
-        password: env['db_password'] ?? "",
-      ),
-      settings: ConnectionSettings(
-        sslMode: SslMode.disable,
-        queryTimeout: Duration(minutes: 1),
-        connectTimeout: Duration(minutes: 1),
-      ),
-    );
+    const maxRetries = 5;
+    int retryCount = 0;
+
+    while (retryCount < maxRetries) {
+      try {
+        print("🔄 Database ulanish urinish [${retryCount + 1}/$maxRetries]...");
+        print("   Host: ${env['db_host'] ?? '0.0.0.0'}");
+        print("   Port: ${env['db_port'] ?? '5432'}");
+        print("   Database: ${env['db_database'] ?? 'tg_bot'}");
+
+        _connection = await Connection.open(
+          Endpoint(
+            host: env['db_host'] ?? "0.0.0.0",
+            port: int.tryParse(env['db_port'] ?? '5432') ?? 5432,
+            database: env['db_database'] ?? "tg_bot",
+            username: env['db_username'] ?? "app_user",
+            password: env['db_password'] ?? "",
+          ),
+          settings: ConnectionSettings(
+            sslMode: SslMode.disable,
+            queryTimeout: Duration(seconds: 30),
+            connectTimeout: Duration(seconds: 30),
+          ),
+        );
+
+        print("✅ Database muvaffaqiyatli ulandi!");
+        return;
+
+      } catch (e, s) {
+        retryCount++;
+        print("❌ Database ulanish xatosi [$retryCount/$maxRetries]: $e");
+        
+        if (retryCount >= maxRetries) {
+          print("⚠️ Database $maxRetries urinishdan keyin ulanmadi");
+          print(s);
+          rethrow;
+        }
+        
+        // Kutish va qayta urinish
+        final waitSeconds = retryCount * 3;
+        print("⏳ $waitSeconds soniya kutilmoqda...");
+        await Future.delayed(Duration(seconds: waitSeconds));
+      }
+    }
   }
 
-  bool get isConnected => _connection.isOpen;
+  bool get isConnected => _connection?.isOpen ?? false;
 
-  void close() async {
-    await _connection.close();
+  /// Database ulanishini yopish
+  Future<void> close() async {
+    if (_connection != null && _connection!.isOpen) {
+      await _connection!.close();
+      _connection = null;
+    }
   }
 
+  /// Qayta ulanish
+  Future<void> _reconnect() async {
+    if (_isConnecting) {
+      // Boshqa thread allaqachon ulanmoqda, kutamiz
+      while (_isConnecting) {
+        await Future.delayed(Duration(milliseconds: 500));
+      }
+      return;
+    }
+
+    _isConnecting = true;
+    try {
+      print("🔄 Database qayta ulanmoqda...");
+      await close();
+      await Future.delayed(Duration(seconds: 2));
+      await init();
+    } finally {
+      _isConnecting = false;
+    }
+  }
+
+  /// Query bajarish (xatolikka chidamli)
   Future<Result> execute(
     Object query, {
     Object? parameters,
@@ -51,30 +111,49 @@ class PostgresSettings {
     QueryMode? queryMode,
     Duration? timeout,
   }) async {
-    try {
-      if (_connection.isOpen) {
-        final qy = await _connection.prepare(query);
-        return qy.run(parameters, timeout: Duration(minutes: 1));
-      } else {
-        print("Connection Closing...");
-        await _connection.close();
-        print("Connection Closed...");
-        await Future.delayed(Duration(seconds: 2));
-        print("Reconnecting...");
-        await init();
-        return _connection.execute(
+    const maxRetries = 3;
+    int retryCount = 0;
+
+    while (retryCount < maxRetries) {
+      try {
+        // Ulanish tekshirish
+        if (_connection == null || !_connection!.isOpen) {
+          await _reconnect();
+        }
+
+        // Query bajarish
+        final result = await _connection!.execute(
           query,
           parameters: parameters,
           ignoreRows: ignoreRows,
           queryMode: queryMode,
-          timeout: Duration(minutes: 1),
+          timeout: timeout ?? Duration(seconds: 30),
         );
+        
+        return result;
+
+      } catch (e, s) {
+        retryCount++;
+        print("❌ SQL xatosi [$retryCount/$maxRetries]: $e");
+
+        if (retryCount >= maxRetries) {
+          print("⚠️ SQL query $maxRetries urinishdan keyin bajarilmadi");
+          print("Query: $query");
+          print(s);
+          return Result(rows: [], affectedRows: 0, schema: ResultSchema([]));
+        }
+
+        // Ulanish muammosi bo'lsa, qayta ulanamiz
+        if (e.toString().contains('connection') || 
+            e.toString().contains('closed') ||
+            e.toString().contains('timeout')) {
+          await _reconnect();
+        }
+
+        await Future.delayed(Duration(seconds: retryCount));
       }
-    } catch (e, s) {
-      print("Sql Excute Qila olmadi Nimadir hatolik ketti ko'rib chiqish zarur !");
-      print(e);
-      print(s);
-      return Result(rows: [], affectedRows: 0, schema: ResultSchema([]));
     }
+
+    return Result(rows: [], affectedRows: 0, schema: ResultSchema([]));
   }
 }

@@ -1,6 +1,5 @@
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
-import 'package:shelf_swagger_ui/shelf_swagger_ui.dart';
 import 'api/api.dart';
 
 /// Class used to set up all the routing for your server
